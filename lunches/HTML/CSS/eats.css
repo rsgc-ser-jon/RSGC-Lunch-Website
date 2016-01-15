@@ -1,0 +1,53 @@
+body
+{
+	font-family:Arial;
+	font-size:14pt;
+	background-color:white;
+	color:black;
+}
+
+#bgrnd
+{
+  background: url("Images/Sushi.jpg") no-repeat center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 40em;
+}
+
+#loginBox
+{
+	padding:1% 1% 1%;
+	font-family:Arial;
+	font-size:14pt;
+	font-weight:;
+	color:#fff;
+	background-color:#0f71c0;
+	display:block;
+	border-radius:5px 5px 5px 5px;
+	float:right;
+	margin-right:0.5%;
+	width:25em;
+	Height:;
+	margin-top:-10%;
+}
+
+.Button1
+{
+	color:white;
+	background-color:#FE7500;
+	border-radius:5px;
+	border:none;
+	width:4.em;	
+	Height:1.6em;
+	font-size:24pt;
+}
+
+h1{
+	font-family:Arial;
+	font-size:14pt;
+	background-color:white;
+	color:black;
+}
