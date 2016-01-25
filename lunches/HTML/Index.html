@@ -21,6 +21,7 @@
         <button>SEARCH</button>
         
         <br> <br>
+        <!--These buttons below guide you to other pages to assist in restaurant searches -->
         <table style="width:100%">
   <tr>
     <td><a href="www.google.ca"><button>Categories</button></a></td>
@@ -31,11 +32,55 @@
     </div>
     <br> 
     <div>
+        <!--Below shows people what is cooking on Chef Corey's menu at RSGC-->
         <p style= "text-align:center">RSGC Lunch Menu</p> <br>
-        <img src= "images/rsgcLunchMenu.gif" alt = "RSGC Lunch Menu"
+        <img src= "Images/rsgcLunchMenu.gif" alt = "RSGC Lunch Menu"
         style = "width:100%; height: 300px;">
         
     </div>
-<img src="./lunches/HTML/Images/Footer.png" 
+
+<img src="./lunches/HTML/Images/Footer.png" />
+
+    <br>
+    <!--This is the most popular area on this page the popular menu, resutaurants info and stats 
+    will be set in a table.  And when the next button is hit the innerhtml will be changed in the
+    Javascript.  So the Table will have an ID and ect.-->
+    <p style="text-align:center"><strong>Popular Among Students</strong></p>
+    <fieldset>
+      <table id = "t1">
+          
+          <tr>
+              <td rowspan="5"><button onclick ="populartable()" id="prev">Previous</button></td>
+              
+              <td rowspan="5">
+                 <img id="img1" src= "Images/heroBurger.gif" alt="George's Burger">
+              </td>
+              
+              <td>
+                  <p>Hero Burger</p>
+              </td>
+              
+              <td>Rating: 8/10</td>
+              
+              <td rowspan="5" ><button onclick ="populartable()" id="next">Next</button></td>
+          </tr>
+          
+          
+          <tr>
+              <td>Specialty: Burgers</td>
+              <td rowspan="3">About: Hero Burger is a blah blah blah</td>
+          </tr>
+          
+          
+          <tr>
+              <td>Location:&nbsp;  Intersection of Bathurst and Bloor, on Bathurst.</td>
+          </tr>
+          
+          <tr>
+              <td>Time required to walk:&nbsp; 7mins </td>
+          </tr>
+      </table>
+    </fieldset>
+    
     </body>
 </html>
