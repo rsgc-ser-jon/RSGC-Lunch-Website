@@ -6,6 +6,15 @@ body
 	color:black;
 }
 
+
+h1
+{
+	background-color:#0f71c0;
+	font-weight:bold;
+	font-size:30pt;
+	margin-top:-0.5em;
+}
+
 #bgrnd
 {
   background: url("Images/Sushi.jpg") no-repeat center fixed; 
@@ -17,7 +26,7 @@ body
   height: 40em;
 }
 
-#loginBox
+.loginBox
 {
 	padding:1% 1% 1%;
 	font-family:Arial;
@@ -32,6 +41,21 @@ body
 	width:25em;
 	margin-top:-10%;
 }
+
+.blueContainer
+{
+	padding:1% 1% 1%;
+	font-family:Arial;
+	font-size:14pt;
+	color:#fff;
+	background-color:#0f71c0;
+	display:block;
+	border-radius:5px 5px 5px 5px;
+	margin-right:0.5%;
+	width:25em;
+	margin-top:10%;
+}
+
 
 .Button1
 {
