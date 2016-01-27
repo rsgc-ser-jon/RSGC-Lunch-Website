@@ -11,35 +11,35 @@
 //     exit;
 // }
 
-// // This page is a self-submitting form.
-// // Process the submitted form.
-// if(isset($_POST['submit']))  {
+// This page is a self-submitting form.
+// Process the submitted form.
+if(isset($_POST['submit']))  {
 
-//     $provided_username = htmlspecialchars(trim($_POST['username']));
-//     $provided_firstname = htmlspecialchars(trim($_POST['firstname']));
-//     $provided_lastname = htmlspecialchars(trim($_POST['lastname']));
-//     $provided_password = htmlspecialchars(trim($_POST['password']));
+    $provided_username = htmlspecialchars(trim($_POST['username']));
+    $provided_firstname = htmlspecialchars(trim($_POST['firstname']));
+    $provided_lastname = htmlspecialchars(trim($_POST['lastname']));
+    $provided_password = htmlspecialchars(trim($_POST['password']));
     
-//     // Verify that username, lastname, and password were provided. First name is optional.
-//     if (strlen($provided_username) == 0) {
-//         $message['username'] = "Username is required.";
-//     }
-//     if (strlen($provided_lastname) == 0) {
-//         $message['lastname'] = "Last name is required.";
-//     }
-//     if (strlen($provided_password) == 0) {
-//         $message['password'] = "A password is required.";
-//     }
+    // Verify that username, lastname, and password were provided. First name is optional.
+    if (strlen($provided_username) == 0) {
+        $message['username'] = "Username is required.";
+    }
+    if (strlen($provided_lastname) == 0) {
+        $message['lastname'] = "Last name is required.";
+    }
+    if (strlen($provided_password) == 0) {
+        $message['password'] = "A password is required.";
+    }
     
-//     // If there were no errors on basic validation of input, proceed
-//     if (!isset($message)) {
+    // If there were no errors on basic validation of input, proceed
+    if (!isset($message)) { 
         
-//         // Connect to database
-//         $host = "127.0.0.1";
-//         $user = "rgordonatrsgc";
-//         $pass = "";
-//         $db = "ct";
-//         $port = 3306;
+        // Connect to database
+        $host = "209.236.71.62";
+        $user = "mrgogor3_RRUSR";
+        $pass = "fries278\mango";
+        $db = "mrgogor3_RR";
+        $port = 3306;
         
 //         // Establish the connection
 //         // (note username and password here is the *database* username and password, not for a user of this website)
@@ -73,9 +73,9 @@
 //             $message['username'] = "That username is taken. Please select another.";
 //         }
 
-//     }
+    }
 
-// }
+}
 
 ?>
 
