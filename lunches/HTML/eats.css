@@ -7,14 +7,6 @@ body
 }
 
 
-h1
-{
-	background-color:#0f71c0;
-	font-weight:bold;
-	font-size:30pt;
-	margin-top:-0.5em;
-}
-
 #bgrnd
 {
   background: url("Images/Sushi.jpg") no-repeat center fixed; 

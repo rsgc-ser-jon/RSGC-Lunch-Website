@@ -95,14 +95,12 @@
 <body id="">
     
 <h1 style="
-    background-color:#0f71c0;
-    color:white;
+	background-color:#0f71c0;
+	color:white;
 	font-weight:bold;
 	font-size:30pt;
-	padding: 1em 1em 1em 1em;
-	margin: -0.19em -1.9em 0em -0.19em;
-	">Register</h1>
-    
+	margin-top:-0.5em;">Register</h1>
+	
   <center>
     <main class="blueContainer" style="margin-top:1em;">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
