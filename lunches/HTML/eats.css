@@ -6,6 +6,15 @@ body
 	color:black;
 }
 
+h1
+{
+	background-color:#0f71c0;
+	color:white;
+	font-weight:bold;
+	font-size:30pt;
+	padding:0.8em;
+	margin: -0.2em -0.5em 0.5em -0.5em;"
+}
 
 #bgrnd
 {
