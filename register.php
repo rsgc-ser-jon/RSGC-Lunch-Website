@@ -105,14 +105,14 @@ if(isset($_POST['submit']))  {
     <main class="blueContainer" style="margin-top:1em;">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <br>
-            Select a username:<br/>
-            <input type="text" name="username" value="<?php echo $_POST['username'] ?>" maxlength="45" size="45"> <?php echo $message['username']; ?><br/><br/>
-            First name:<br/>
-            <input type="text" name="firstname" value="<?php echo $_POST['firstname'] ?>" maxlength="45" size="45"> <?php echo $message['firstname']; ?><br/><br/>
-            Last name:<br/>
-            <input type="text" name="lastname" value="<?php echo $_POST['lastname'] ?>" maxlength="45" size="45"> <?php echo $message['lastname']; ?><br/><br/>
-            Select a password:<br/>
-            <input type="password" name="password" value="<?php echo $_POST['password'] ?>" maxlength="45" size="45"> <?php echo $message['password']; ?><br/><br/>
+            Select a username:<br>
+            <input type="text" name="username" value="<?php echo $_POST['username'] ?>" maxlength="45" size="45"> <br><?php echo $message['username']; ?><br><br>
+            First name:<br>
+            <input type="text" name="firstname" value="<?php echo $_POST['firstname'] ?>" maxlength="45" size="45"> <br><?php echo $message['firstname']; ?><br><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="<?php echo $_POST['lastname'] ?>" maxlength="45" size="45"> <br><?php echo $message['lastname']; ?><br/><br>
+            Select a password:<br>
+            <input type="password" name="password" value="<?php echo $_POST['password'] ?>" maxlength="45" size="45"> <br><?php echo $message['password']; ?><br><br>
             <input type="submit" name="submit" value="Create new account" class="Button1">
         </form>
         
