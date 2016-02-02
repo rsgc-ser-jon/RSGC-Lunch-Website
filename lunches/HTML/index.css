@@ -1,0 +1,30 @@
+.rsgc {width: 70%;
+        height: 40%;
+        border-radius: 20px;
+        margin-left:auto;
+        margin-right:auto;
+}
+
+button {text-align: center;
+        background: aliceblue;
+        padding: 0.1px 0.1px;
+        font-size:12px;
+        font-style: oblique;
+        font-family:serif;
+        height:40px;
+        width:70px;}
+
+button:hover {background-color:yellow;
+                cursor:pointer;}
+        
+body {font-family: serif;}
+
+.header {text-align:center;
+        font-family: serif;
+        width:100%;}
+
+.search {width:200px;}
+.sButton {border-radius:25px;
+        height:20px;}
+        
+

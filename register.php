@@ -99,7 +99,8 @@ if(isset($_POST['submit']))  {
 	color:white;
 	font-weight:bold;
 	font-size:30pt;
-	margin-top:-0.5em;">Register</h1>
+	padding:0.8em;
+	margin: -0.2em -0.5em 0.5em -0.5em;">Register</h1>
 	
   <center>
     <main class="blueContainer" style="margin-top:1em;">
@@ -122,7 +123,6 @@ if(isset($_POST['submit']))  {
     </main>
 </center>
 
-<img src="lunches/HTML/Images/Footer.png" style="margin-bottom:-20px;margin-top:-35em;margin-left:-8px;width:101.23%;vertical-align:bottom;"/>
 
 </body>
 </html>
