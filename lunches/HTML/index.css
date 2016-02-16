@@ -1,6 +1,7 @@
 .rsgc {width: 70%;
         height: 40%;
         border-radius: 20px;
+        display:block;
         margin-left:auto;
         margin-right:auto;
 }
@@ -12,9 +13,11 @@ button {text-align: center;
         font-style: oblique;
         font-family:serif;
         height:40px;
-        width:70px;}
+        width:120px;
+        border-radius:5px;
+}
 
-button:hover {background-color:yellow;
+button:hover {background-color:gray;
                 cursor:pointer;}
         
 body {font-family: serif;}
@@ -23,8 +26,26 @@ body {font-family: serif;}
         font-family: serif;
         width:100%;}
 
-.search {width:200px;}
+.search {width:200px;
+}
 .sButton {border-radius:25px;
-        height:20px;}
-        
+        height:20px;
+}
+.searchField{
+        margin-left:50%;
+}
 
+.momba{
+        margin-right:20%;
+        margin-left:20%;
+}
+ 
+body{
+        background-color:white;
+}
+
+.head{
+        background-color:blue;
+        color:white;
+        border-radius:15px;
+}

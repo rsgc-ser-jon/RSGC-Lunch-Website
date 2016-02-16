@@ -17,7 +17,8 @@
     
     
     <body>
-    <div>
+    <div class="momba">
+        <div class ="head">
         <!-- Table containing the header-->
     <table class= "header">
   <tr>
@@ -26,14 +27,21 @@
     <td><button>Sign-Out</button></td>
   </tr>
         </table>
+        </div>
+        
         
         <br>
         <!-- Search Button for Restaurants-->
-        <input type="text" value="" class="search" id="RestaurantSearch">
+        <div class= "searchField">
         <button class="sButton">SEARCH</button>
+        <input type="text" value="" class="search" id="RestaurantSearch">
+        
+        </div>
+        
         
         <br> <br>
         <!--These buttons below guide you to other pages to assist in restaurant searches -->
+        <div>
         <table class = "header">
   <tr>
     <td><a href="www.google.ca"><button>Categories</button></a></td>
@@ -41,15 +49,15 @@
     <td><a href="www.google.ca"><button>All Restaurants</button></a></td>
   </tr>
         </table>
-    </div>
+        </div>
     <br> 
-    <div>
+        <div>
         <!--Below shows people what is cooking on Chef Corey's menu at RSGC-->
         <p style= "text-align:center">RSGC Lunch Menu</p> <br>
         <img src= "Images/rsgcLunchMenu.gif" alt = "RSGC Lunch Menu"
         class = "rsgc">
         
-    </div>
+        </div>
 
 
 
@@ -58,6 +66,7 @@
     will be set in a table.  And when the next button is hit the innerhtml will be changed in the
     Javascript.  So the Table will have an ID and ect.-->
     <p style="text-align:center"><strong>Popular Among Students</strong></p>
+    <!--contains the info as to what each restaurant has... restaurants stats.-->
     <fieldset>
       <table id = "t1">
           
@@ -79,22 +88,26 @@
           
           
           <tr>
-              <td>Specialty: Burgers</td>
-              <td rowspan="3">About: Hero Burger is a blah blah blah</td>
+              <td><em>Specialty:</em> Burgers</td>
+              <td rowspan="3"> &nbsp; 
           </tr>
-          
-          
           <tr>
-              <td>Location:&nbsp;  Intersection of Bathurst and Bloor, on Bathurst.</td>
+              <td><em>About:</em> Hero Burger is a blah blah blah</td>
           </tr>
           
           <tr>
-              <td>Time required to walk:&nbsp; 7mins </td>
+              <td><em>Location:</em>&nbsp;  Intersection of Bathurst and Bloor, on Bathurst.</td>
+          </tr>
+          
+          <tr>
+              <td><em>Time</em> <i>required to walk:</i>&nbsp; 7mins </td>
           </tr>
       </table>
     </fieldset>
     
     <p><a href = "mailto:ckelly@rsgc.on.ca?Subject=Hello">Contact Us</a></p>
     
+    <!--closing tag for momba... header that wraps the entire page-->
+    </div> 
     </body>
 </html>
