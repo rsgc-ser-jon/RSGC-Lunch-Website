@@ -123,6 +123,8 @@ if(isset($_POST['submit']))  {
     </main>
 </center>
 
+<img src="lunches/HTML/Images/Footer.png" style="margin-bottom:-20px;margin-top:-35em;margin-left:-8px;width:101.23%;vertical-align:bottom;z-index:-1;position:relative;">
+
 
 </body>
 </html>
