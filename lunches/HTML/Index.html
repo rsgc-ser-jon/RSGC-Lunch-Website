@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RSGC Lunches</title>
+        
+        
+            <script>
+        
+            </script>
+    <link rel = "stylesheet" href= "index.css">
+    
+    </head>
+    
+    
+    
+
+    
+    
+    <body>
+    <div class="momba">
+        <div class ="head">
+        <!-- Table containing the header-->
+    <table class= "header">
+  <tr>
+    <td>Billy Bob</td>
+    <td><h2>RSGC-LUNCH ROUTES</h2></td>		
+    <td><button>Sign-Out</button></td>
+  </tr>
+        </table>
+        </div>
+        
+        
+        <br>
+        <!-- Search Button for Restaurants-->
+        <div class= "searchField">
+        <button class="sButton">SEARCH</button>
+        <input type="text" value="" class="search" id="RestaurantSearch">
+        
+        </div>
+        
+        
+        <br> <br>
+        <!--These buttons below guide you to other pages to assist in restaurant searches -->
+        <div>
+        <table class = "header">
+  <tr>
+    <td><a href="www.google.ca"><button>Categories</button></a></td>
+    <td><a href="www.google.ca"><button>Genius Search</button></a></td>		
+    <td><a href="www.google.ca"><button>All Restaurants</button></a></td>
+  </tr>
+        </table>
+        </div>
+    <br> 
+        <div>
+        <!--Below shows people what is cooking on Chef Corey's menu at RSGC-->
+        <p style= "text-align:center">RSGC Lunch Menu</p> <br>
+        <img src= "Images/rsgcLunchMenu.gif" alt = "RSGC Lunch Menu"
+        class = "rsgc">
+        
+        </div>
+
+
+
+    <br>
+    <!--This is the most popular area on this page the popular menu, resutaurants info and stats 
+    will be set in a table.  And when the next button is hit the innerhtml will be changed in the
+    Javascript.  So the Table will have an ID and ect.-->
+    <p style="text-align:center"><strong>Popular Among Students</strong></p>
+    <!--contains the info as to what each restaurant has... restaurants stats.-->
+    <fieldset>
+      <table id = "t1">
+          
+          <tr>
+              <td rowspan="5"><button onclick ="populartable()" id="prev">Previous</button></td>
+              
+              <td rowspan="5">
+                 <img id="img1" src= "Images/heroBurger.gif" alt="George's Burger" style = "height:50px; width:50px;">
+              </td>
+              
+              <td>
+                  <p>Hero Burger</p>
+              </td>
+              
+              <td>Rating: 8/10</td>
+              
+              <td rowspan="5" ><button onclick ="populartable()" id="next">Next</button></td>
+          </tr>
+          
+          
+          <tr>
+              <td><em>Specialty:</em> Burgers</td>
+              <td rowspan="3"> &nbsp; 
+          </tr>
+          <tr>
+              <td><em>About:</em> Hero Burger is a blah blah blah</td>
+          </tr>
+          
+          <tr>
+              <td><em>Location:</em>&nbsp;  Intersection of Bathurst and Bloor, on Bathurst.</td>
+          </tr>
+          
+          <tr>
+              <td><em>Time</em> <i>required to walk:</i>&nbsp; 7mins </td>
+          </tr>
+      </table>
+    </fieldset>
+    
+    <p><a href = "mailto:ckelly@rsgc.on.ca?Subject=Hello">Contact Us</a></p>
+    
+    <!--closing tag for momba... header that wraps the entire page-->
+    </div> 
+    </body>
+</html>

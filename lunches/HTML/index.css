@@ -1,0 +1,51 @@
+.rsgc {width: 70%;
+        height: 40%;
+        border-radius: 20px;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+}
+
+button {text-align: center;
+        background: aliceblue;
+        padding: 0.1px 0.1px;
+        font-size:12px;
+        font-style: oblique;
+        font-family:serif;
+        height:40px;
+        width:120px;
+        border-radius:5px;
+}
+
+button:hover {background-color:gray;
+                cursor:pointer;}
+        
+body {font-family: serif;}
+
+.header {text-align:center;
+        font-family: serif;
+        width:100%;}
+
+.search {width:200px;
+}
+.sButton {border-radius:25px;
+        height:20px;
+}
+.searchField{
+        margin-left:50%;
+}
+
+.momba{
+        margin-right:20%;
+        margin-left:20%;
+}
+ 
+body{
+        background-color:white;
+}
+
+.head{
+        background-color:blue;
+        color:white;
+        border-radius:15px;
+}
