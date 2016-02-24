@@ -49,3 +49,22 @@ body{
         color:white;
         border-radius:15px;
 }
+
+fieldset {
+        border-radius:20px;
+}
+
+.gSearch {
+        text-align:center;
+        font-weight:3px;
+        font-family:serif;
+}
+
+.underline {
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        width:40%;
+        height:30px;
+        
+}
