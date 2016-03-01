@@ -5,7 +5,34 @@
         
         
             <script>
+            function $(id){
+	        return document.getElementById(id);}
+            
+            // DECLARE VARIABLES
+            
+            var Image = new Array("Images/GeorgesBurgerIndex.gif", "Images/heroBurgerIndex.gif", "Images/SomkesPIndex.gif")
+            
+            var Image_Length = Image.length -1;
+            var Image_Num = 0;
+            //var slideShow = document.getElementsByName(sShow).src
+            
+            function change_image(num){
+                Image_Num = Image_Num + num;
+                
+                if(Image_Num > Image_Length){
+                    Image_Num = 0;
+                    }
+                
+                if(Image_Num < 0){
+                    Image_Num = Image_Length;
+                }
+                
+                $("sShow").src = Image[Image_Num];
+                
+                return false
+            }
         
+            
             </script>
     <link rel = "stylesheet" href= "index.css">
     
@@ -39,13 +66,13 @@
         </div>
         
         
-        <br> <br>
+        <br>
         <!--These buttons below guide you to other pages to assist in restaurant searches -->
         <div>
         <table class = "header">
   <tr>
     <td><a href="www.google.ca"><button>Categories</button></a></td>
-    <td><a href="www.google.ca"><button>Genius Search</button></a></td>		
+    <td><a href="genius.html"><button>Genius Search</button></a></td>		
     <td><a href="www.google.ca"><button>All Restaurants</button></a></td>
   </tr>
         </table>
@@ -53,7 +80,7 @@
     <br> 
         <div>
         <!--Below shows people what is cooking on Chef Corey's menu at RSGC-->
-        <p style= "text-align:center">RSGC Lunch Menu</p> <br>
+        <p style= "text-align:center">RSGC Lunch Menu</p>
         <img src= "Images/rsgcLunchMenu.gif" alt = "RSGC Lunch Menu"
         class = "rsgc">
         
@@ -66,44 +93,56 @@
     will be set in a table.  And when the next button is hit the innerhtml will be changed in the
     Javascript.  So the Table will have an ID and ect.-->
     <p style="text-align:center"><strong>Popular Among Students</strong></p>
-    <!--contains the info as to what each restaurant has... restaurants stats.-->
+    <!--Slide Show Table-->
     <fieldset>
-      <table id = "t1">
-          
-          <tr>
-              <td rowspan="5"><button onclick ="populartable()" id="prev">Previous</button></td>
-              
-              <td rowspan="5">
-                 <img id="img1" src= "Images/heroBurger.gif" alt="George's Burger" style = "height:50px; width:50px;">
-              </td>
-              
-              <td>
-                  <p>Hero Burger</p>
-              </td>
-              
-              <td>Rating: 8/10</td>
-              
-              <td rowspan="5" ><button onclick ="populartable()" id="next">Next</button></td>
-          </tr>
-          
-          
-          <tr>
-              <td><em>Specialty:</em> Burgers</td>
-              <td rowspan="3"> &nbsp; 
-          </tr>
-          <tr>
-              <td><em>About:</em> Hero Burger is a blah blah blah</td>
-          </tr>
-          
-          <tr>
-              <td><em>Location:</em>&nbsp;  Intersection of Bathurst and Bloor, on Bathurst.</td>
-          </tr>
-          
-          <tr>
-              <td><em>Time</em> <i>required to walk:</i>&nbsp; 7mins </td>
-          </tr>
-      </table>
+    <table>
+        <tr>
+            <td><button onclick = "change_image(-1)">Previous</button></td>
+            <td><img src="Images/GeorgesBurgerIndex.gif" id="sShow" class="sShow"></td>
+            <td><button onclick = "change_image(1)">Next</button></td>
+        </tr>
+    </table>
     </fieldset>
+    
+    
+    
+    
+    
+    <!--contains the info as to what each restaurant has... restaurants stats.-->
+      <!--<table id = "t1">-->
+          
+      <!--    <tr>-->
+              
+      <!--        <td rowspan="5">-->
+      <!--           <img id="img1" src= "Images/SmokesP.png" alt="George's Burger" style = "height:50px; width:50px;">-->
+      <!--        </td>-->
+              
+      <!--        <td>-->
+      <!--            <p>Smoke's Poutinery</p>-->
+      <!--        </td>-->
+              
+      <!--        <td>Rating: 9/10</td>-->
+      <!--    </tr>-->
+          
+          
+      <!--    <tr>-->
+      <!--        <td><em>Specialty:</em>Poutine</td>-->
+      <!--        <td rowspan="2"> &nbsp; -->
+      <!--    </tr>-->
+      <!--    <tr>-->
+      <!--        <td><em>About:</em> Smoke's is one of the more famous places around the city<br>-->
+      <!--           smoke's is famous for the number of toppins they have <br>-->
+      <!--           on poutine.</td>-->
+      <!--    </tr>-->
+          
+      <!--    <tr>-->
+      <!--        <td><em>Location:</em>&nbsp;  Intersection of Bathurst and Bloor, on Bathurst.</td>-->
+      <!--    </tr>-->
+          
+      <!--    <tr>-->
+      <!--        <td><em>Time</em> <i>required to walk:</i>&nbsp; 7mins </td>-->
+      <!--    </tr>-->
+      <!--</table>-->
     
     <p><a href = "mailto:ckelly@rsgc.on.ca?Subject=Hello">Contact Us</a></p>
     
