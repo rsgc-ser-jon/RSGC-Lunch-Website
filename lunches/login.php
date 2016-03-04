@@ -2,18 +2,11 @@
 if(isset($_POST['submit']))  {
     
     // Connect to database
-     $host="localhost";
-        $user = "root";
-        $pass = "";
-        $db = "test123";
-        $port = 8080;
-
-
-    /*$host = "209.236.71.62";
+    $host = "209.236.71.62";
     $user = "mrgogor3_RRUSR";
     $pass = "fries278\mango";
     $db = "mrgogor3_RR";
-    $port = 3306;*/
+    $port = 3306;
     
     // Establish the connection
     // (note username and password here is the *database* username and password, not for a user of this website)
