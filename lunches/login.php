@@ -2,11 +2,18 @@
 if(isset($_POST['submit']))  {
     
     // Connect to database
-    $host = "209.236.71.62";
+     $host="localhost";
+        $user = "root";
+        $pass = "";
+        $db = "test123";
+        $port = 8080;
+
+
+    /*$host = "209.236.71.62";
     $user = "mrgogor3_RRUSR";
     $pass = "fries278\mango";
     $db = "mrgogor3_RR";
-    $port = 3306;
+    $port = 3306;*/
     
     // Establish the connection
     // (note username and password here is the *database* username and password, not for a user of this website)
@@ -72,10 +79,10 @@ if(isset($_POST['submit']))  {
 <center><div style="font-size:200%;font-weight:bold;">Login</div>
 <br>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-Username: <input type="text" style="width:50%;height:2em;" value="<?php echo $_POST['username'] ?>" maxlength="45" size="45"> <br><?php echo $message['username']; ?>
+Username: <input type="text" name="username" style="width:50%;height:2em;" value="<?php echo $_POST['username'] ?>" maxlength="45" size="45"> <br><?php echo $message['username']; ?>
 <br>
 <br>
-Password:<input type="text" style="margin-left:5px;width:50%;height:2em;"value="<?php echo $_POST['pw'] ?>" maxlength="45" size="45"> <br><?php echo $message['pw']; ?>
+Password:<input type="text" name="password" style="margin-left:5px;width:50%;height:2em;"value="<?php echo $_POST['pw'] ?>" maxlength="45" size="45"> <br><?php echo $message['pw']; ?>
 <br>
 <br>
 </form>
