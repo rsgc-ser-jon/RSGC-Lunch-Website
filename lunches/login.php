@@ -72,10 +72,10 @@ if(isset($_POST['submit']))  {
 <center><div style="font-size:200%;font-weight:bold;">Login</div>
 <br>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-Username: <input type="text" style="width:50%;height:2em;" value="<?php echo $_POST['username'] ?>" maxlength="45" size="45"> <br><?php echo $message['username']; ?>
+Username: <input type="text" name="username" style="width:50%;height:2em;" value="<?php echo $_POST['username'] ?>" maxlength="45" size="45"> <br><?php echo $message['username']; ?>
 <br>
 <br>
-Password:<input type="text" style="margin-left:5px;width:50%;height:2em;"value="<?php echo $_POST['pw'] ?>" maxlength="45" size="45"> <br><?php echo $message['pw']; ?>
+Password:<input type="text" name="password" style="margin-left:5px;width:50%;height:2em;"value="<?php echo $_POST['pw'] ?>" maxlength="45" size="45"> <br><?php echo $message['pw']; ?>
 <br>
 <br>
 </form>
