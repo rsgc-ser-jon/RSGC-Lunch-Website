@@ -13,7 +13,7 @@ h1
 	font-weight:bold;
 	font-size:30pt;
 	padding:0.8em;
-	margin: -0.2em -0.5em 0.5em -0.5em;"
+	margin: -0.2em -0.5em 0.5em -0.5em;
 }
 
 #bgrnd
@@ -73,4 +73,16 @@ h1{
 	font-size:14pt;
 	background-color:white;
 	color:black;
+}
+
+.sShow {
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        width:90%;
+        height:120px;
+}
+
+.infoTable {
+	width:100%;
 }

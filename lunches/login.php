@@ -38,9 +38,9 @@ if(isset($_POST['submit']))  {
                 // Now re-direct to the logged-in home page
                 $host  = $_SERVER['HTTP_HOST'];
                 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-                $extra = 'home.php';
+                $extra = 'HTML/Index.php';
                 header("Location: http://$host$uri/$extra");
-                exit;
+                die();
           } else {
               $message['general'] = "Incorrect password for user <strong>" . $provided_username . "</strong>.";
           }
@@ -62,30 +62,32 @@ if(isset($_POST['submit']))  {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RSGC Eats</title>
-<link href="eats.css" rel="stylesheet" type="text/css">
+<link href="HTML/eats.css" rel="stylesheet" type="text/css">
 </head>
 
 <body style="background-color:#1B3B91" id="bgrnd">
+<!--HEADER IMAGE-->
+<img src="HTML/Images/Header1.png" style="margin-top:-8px;margin-left:-8px;width:101.23%;z-index:-1;position:relative;">
 
-<img src="Images/Header1.png" style="margin-top:-8px;margin-left:-8px;width:101.23%;">
 <div class="loginBox">
-<center><div style="font-size:200%;font-weight:bold;">Login</div>
+<center><div style="font-size:200%;font-weight:bold;position:realative;">Login</div>
 <br>
+<!--The form that links to the php and successfully logs people into the site-->
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-Username: <input type="text" style="width:50%;height:2em;" value="<?php echo $_POST['username'] ?>" maxlength="45" size="45"> <br><?php echo $message['username']; ?>
+Username: <input name="username" type="text" style="width:50%;height:2em;" value="<?php echo $_POST['username'] ?>" maxlength="45" size="45"> <br><?php echo $message['username']; ?>
 <br>
 <br>
-Password:<input type="text" style="margin-left:5px;width:50%;height:2em;"value="<?php echo $_POST['pw'] ?>" maxlength="45" size="45"> <br><?php echo $message['pw']; ?>
+Password:<input name="password" type="password" style="margin-left:5px;width:50%;height:2em;"value="<?php echo $_POST['pw'] ?>" maxlength="45" size="45"> <br><?php echo $message['pw']; ?>
 <br>
 <br>
+<input type="submit" value="Sign In" class="Button1" name="submit">
+<a href= "register.php"><input type="button" value="Sign Up" class="Button1" style="background-color:#0CB3EE;"></a>
 </form>
-<input type="button" value="Sign In" class="Button1">
-<input type="button" value="Sign Up" class="Button1" style="background-color:#0CB3EE;">
 
 </center>
 </div>
 
-<img src="Images/Footer.png" style="margin-bottom:-20px;margin-top:-400px;margin-left:-8px;width:101.23%;vertical-align:bottom;">
+<img src="HTML/Images/Footer.png" style="margin-bottom:-20px;margin-top:-400px;margin-left:-8px;width:101.23%;vertical-align:bottom;z-index:-1;position:relative;">
 
 </body>
 </html>

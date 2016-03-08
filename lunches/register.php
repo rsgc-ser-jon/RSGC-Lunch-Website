@@ -47,7 +47,9 @@ if(isset($_POST['submit']))  {
         
         // Verify that username not already created
         $query = "SELECT * FROM user WHERE username = '" . $provided_username . "';";
+        
         $result = mysqli_query($connection, $query);
+        
         if (! $row = mysqli_fetch_assoc($result) ) {
 
             // Proceed with creating a user based on provided username
@@ -62,9 +64,9 @@ if(isset($_POST['submit']))  {
                 // All is well, re-direct to the page where the user can log in.
                 $host  = $_SERVER['HTTP_HOST'];
                 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-                $extra = 'index.php';
-                header("Location: http://$host$uri/$extra");
-                exit;
+                $extra = 'HTML/Index.php';
+                header("Location: login.php");
+                die();
             }
             
         } else {
@@ -87,7 +89,7 @@ if(isset($_POST['submit']))  {
 
   <title>Curriculum Organizer</title>
 
- <link href="./lunches/HTML/eats.css" rel="stylesheet" type="text/css">
+ <link href="HTML/eats.css" rel="stylesheet" type="text/css">
   <!-- A properly secured site would serve this page over HTTPS (secure HTTP). Why is that? -->
   
 </head>
@@ -122,6 +124,8 @@ if(isset($_POST['submit']))  {
         <p><?php echo $message['general']; ?></p>
     </main>
 </center>
+
+<img src="HTML/Images/Footer.png" style="margin-bottom:-20px;margin-top:-35em;margin-left:-8px;width:101.23%;vertical-align:bottom;z-index:-1;position:relative;">
 
 
 </body>

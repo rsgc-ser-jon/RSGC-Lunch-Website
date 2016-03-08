@@ -5,7 +5,34 @@
         
         
             <script>
+            function $(id){
+	        return document.getElementById(id);}
+            
+            // DECLARE VARIABLES
+            
+            var Image = new Array("Images/GeorgesBurgerIndex.gif", "Images/heroBurgerIndex.gif", "Images/SomkesPIndex.gif")
+            
+            var Image_Length = Image.length -1;
+            var Image_Num = 0;
+            //var slideShow = document.getElementsByName(sShow).src
+            
+            function change_image(num){
+                Image_Num = Image_Num + num;
+                
+                if(Image_Num > Image_Length){
+                    Image_Num = 0;
+                    }
+                
+                if(Image_Num < 0){
+                    Image_Num = Image_Length;
+                }
+                
+                $("sShow").src = Image[Image_Num];
+                
+                return false
+            }
         
+            
             </script>
     <link rel = "stylesheet" href= "index.css">
     
@@ -67,43 +94,61 @@
     Javascript.  So the Table will have an ID and ect.-->
     <p style="text-align:center"><strong>Popular Among Students</strong></p>
     <!--contains the info as to what each restaurant has... restaurants stats.-->
+    
+    
     <fieldset>
-      <table id = "t1">
-          
-          <tr>
-              <td rowspan="5"><button  class="Button1" onclick ="populartable()" id="prev">Previous</button></td>
-              
-              <td rowspan="5">
-                 <img id="img1" src= "Images/heroBurger.gif" alt="George's Burger" style = "height:50px; width:50px;">
-              </td>
-              
-              <td>
-                  <p>Hero Burger</p>
-              </td>
-              
-              <td>Rating: 8/10</td>
-              
-              <td rowspan="5" ><button  class="Button1" onclick ="populartable()" id="next">Next</button></td>
-          </tr>
-          
-          
-          <tr>
-              <td><em>Specialty:</em> Burgers</td>
-              <td rowspan="3"> &nbsp; 
-          </tr>
-          <tr>
-              <td><em>About:</em> Hero Burger is a blah blah blah</td>
-          </tr>
-          
-          <tr>
-              <td><em>Location:</em>&nbsp;  Intersection of Bathurst and Bloor, on Bathurst.</td>
-          </tr>
-          
-          <tr>
-              <td><em>Time</em> <i>required to walk:</i>&nbsp; 7mins </td>
-          </tr>
-      </table>
+    <table class= "infoTable">
+        <tr>
+            <td><button onclick = "change_image(-1)" class= "Button1">Previous</button></td>
+            <td><img src="Images/GeorgesBurgerIndex.gif" id="sShow" class="sShow"></td>
+            <td><button onclick = "change_image(1)" class= "Button1">Next</button></td>
+        </tr>
+    </table>
     </fieldset>
+    
+    
+    
+    
+    <!--Coded area for making the restaurants Index's-->
+    <!--<fieldset>-->
+    <!--  <table id = "t1">-->
+          
+    <!--      <tr>-->
+    <!--          <td rowspan="5"><button  class="Button1" onclick ="populartable()" id="prev">Previous</button></td>-->
+              
+    <!--          <td rowspan="5">-->
+    <!--             <img id="img1" src= "Images/GeorgesBurger.jpg" alt="Smokes P" style = "height:50px; width:50px;">-->
+    <!--          </td>-->
+              
+    <!--          <td>-->
+    <!--              <p>George's Burger</p>-->
+    <!--          </td>-->
+              
+    <!--          <td>Rating: 8.5/10</td>-->
+              
+    <!--          <td rowspan="5" ><button  class="Button1" onclick ="populartable()" id="next">Next</button></td>-->
+    <!--      </tr>-->
+          
+          
+    <!--      <tr>-->
+    <!--          <td><em>Specialty:</em> Burgers</td>-->
+    <!--          <td rowspan="3"> &nbsp; -->
+    <!--      </tr>-->
+    <!--      <tr>-->
+    <!--          <td><em>About:</em> George's Burgers is more of a histortical burger place for students of RSGC. They <br>-->
+    <!--          have amazing deals and it is close to the College. -->
+    <!--          </td>-->
+    <!--      </tr>-->
+          
+    <!--      <tr>-->
+    <!--          <td><em>Location:</em>&nbsp;  The Intersection of Bathurst on Bloor.</td>-->
+    <!--      </tr>-->
+          
+    <!--      <tr>-->
+    <!--          <td><em>Time</em> <i>required to walk:</i>&nbsp; 5mins </td>-->
+    <!--      </tr>-->
+    <!--  </table>-->
+    <!--</fieldset>-->
     
     <p><a href = "mailto:ckelly@rsgc.on.ca?Subject=Hello" style="text-decoration:none;color:black;">Contact Us</a></p>
     
