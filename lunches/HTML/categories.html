@@ -35,23 +35,42 @@
         
     <h3 class = "gSearch">Categories</h3>
     <img src = "Images/SwirlyUnderline.png" class = "underline"><br>
-    <br>
-    <p><em>Select the type of meal you're looking for and we will find you places that<br>
-    fit those fields.</em></p>
-    <br><br>
     
-    <table>
-        <tr>
-            <td>
-                <input type="radio">
-            </td>
-        </tr>
-    </table>
-    <br>
-    <br>
-    <button class="sButton">SEARCH</button>
-    <br><br><br><br><br><br><br><br>
-    <p><a href = "mailto:ckelly@rsgc.on.ca?Subject=Hello">Contact Us</a></p>
+    <!--Use pills to separate each category-->
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+      <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+      <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <!--Main Div Tab-->
+        
+        <!--The actual pill -->
+        <h2>Dynamic Tabs</h2>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+        <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+        <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+      </ul>
+        <!--Use Div's for each category-->
+      <div id="Burgers" class="tab-pane fade in active">
+        <h3>Burgers</h3>
+        <p>Some content.</p>
+      </div>
+      
+      <div id="menu1" class="tab-pane fade">
+        <h3>Menu 1</h3>
+        <p>Some content in menu 1.</p>
+      </div>
+      
+      <div id="menu2" class="tab-pane fade">
+        <h3>Menu 2</h3>
+        <p>Some content in menu 2.</p>
+      </div>
+      
+    </div>
     
     <!--closing tag for momba... header that wraps the entire page-->
     </div> 
