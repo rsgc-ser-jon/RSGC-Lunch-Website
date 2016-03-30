@@ -34,12 +34,12 @@
 </h1>    
     <div class="pageCenter">
       
-      <table style="width:100%;margin-top:3em;background-color:#065da5;">
+      <table style="width:100%;margin-top:3em;">
           <tr>
-              <td style="width:30%;height:50%;"><img class="rProfileImage" src="Images/aziz.png"></td>
-              <td style="background-color:white;padding:3em;;position:relative;z-index:1;" rowspan="3">
+              <td style="width:30%;height:50%;border-radius:10px;"><img class="rProfileImage" style="border-radius:10px;" src="Images/aziz.png"></td>
+              <td style="background-color:white;padding:3em;position:relative;z-index:1;border-radius:10px;" rowspan="3">
             
-            <b>Description</b>
+            <h2>Description</h2>
             
             <p>
                 
@@ -58,11 +58,12 @@
             Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, 
             augue velit cursus nunc,
             </td>
-        <tr style="background-color:#065da5;color:white;padding:1.5em;">
+        <tr style="background-color:white;">
         </style>
-            <td style="border:1px;">
+        </style>
+            <td style="background-color:#065da5;color:white;padding:;font-size:2em;border:1px;">
                 <center>
-                <b id="rName" style="font-size:2em;">George's Deli</b>  
+                <b id="rName">George's Deli</b>  
                 </center>
             </td>
         </tr>
@@ -72,7 +73,6 @@
                 <b id="minWalk">8 minute walk</b>
               </td>
           <tr>
-              
           </tr>
       </table>
       
