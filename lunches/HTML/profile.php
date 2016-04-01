@@ -10,14 +10,6 @@
     <link rel = "stylesheet" href= "index.css">
     
     </head>
-    
-    
-    
-
-    
-    
-    <body>
-    
  
 <h1>
 <center>
@@ -61,7 +53,7 @@
         <tr style="background-color:white;">
         </style>
         </style>
-            <td style="background-color:#065da5;color:white;padding:;font-size:2em;border:1px;">
+            <td style="background-color:#065da5;color:white;font-size:2em;">
                 <center>
                 <b id="rName">George's Deli</b>  
                 </center>
@@ -69,6 +61,15 @@
         </tr>
           </tr>
               <td style="background-color:#2E91E3;color:white;padding:1.5em;">
+                  <b>Rating</b>
+                 <form>
+                     1<input type="radio" name="star"/>
+                     2<input type="radio" name="star"/>
+                     3<input type="radio" name="star"/>
+                     4<input type="radio" name="star"/>
+                     5<input type="radio" name="star"/>
+                     <input type="button" name="star" value="submit"/>
+                 </form>
                 <p id="adress">795 Bathurst St, Toronto, ON M5S</p>
                 <b id="minWalk">8 minute walk</b>
               </td>
