@@ -68,6 +68,11 @@
         </tr>
           </tr>
               <td style="background-color:#2E91E3;color:white;padding:1.5em;">
+                  <!--Getting the rating system to work, the form that connects the ratings to the database-->
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <p>rate:</p>
+            </form>
+                
                 <p id="adress">795 Bathurst St, Toronto, ON M5S</p>
                 <b id="minWalk">8 minute walk</b>
               </td>
