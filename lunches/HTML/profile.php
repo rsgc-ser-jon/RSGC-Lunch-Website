@@ -10,14 +10,6 @@
     <link rel = "stylesheet" href= "index.css">
     
     </head>
-    
-    
-    
-
-    
-    
-    <body>
-    
  
 <h1>
 <center>
@@ -34,12 +26,12 @@
 </h1>    
     <div class="pageCenter">
       
-      <table style="width:100%;margin-top:3em;background-color:#065da5;">
+      <table style="width:100%;margin-top:3em;">
           <tr>
-              <td style="width:30%;height:50%;"><img class="rProfileImage" src="Images/aziz.png"></td>
-              <td style="background-color:white;padding:3em;;position:relative;z-index:1;" rowspan="3">
+              <td style="width:30%;height:50%;border-radius:10px;"><img class="rProfileImage" style="border-radius:10px;" src="Images/aziz.png"></td>
+              <td style="background-color:white;padding:3em;position:relative;z-index:1;border-radius:10px;" rowspan="3">
             
-            <b>Description</b>
+            <h2>Description</h2>
             
             <p>
                 
@@ -58,26 +50,38 @@
             Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, 
             augue velit cursus nunc,
             </td>
-        <tr style="background-color:#065da5;color:white;padding:1.5em;">
+        <tr style="background-color:white;">
         </style>
-            <td style="border:1px;">
+        </style>
+            <td style="background-color:#065da5;color:white;font-size:2em;">
                 <center>
-                <b id="rName" style="font-size:2em;">George's Deli</b>  
+                <b id="rName">George's Deli</b>  
                 </center>
             </td>
         </tr>
           </tr>
               <td style="background-color:#2E91E3;color:white;padding:1.5em;">
+<<<<<<< HEAD
                   <!--Getting the rating system to work, the form that connects the ratings to the database-->
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <p>rate:</p>
             </form>
                 
+=======
+                  <b>Rating</b>
+                 <form>
+                     1<input type="radio" name="star"/>
+                     2<input type="radio" name="star"/>
+                     3<input type="radio" name="star"/>
+                     4<input type="radio" name="star"/>
+                     5<input type="radio" name="star"/>
+                     <input type="button" name="star" value="submit"/>
+                 </form>
+>>>>>>> 91fb481683b8b7b94f9fff2b502e7616c5af72cf
                 <p id="adress">795 Bathurst St, Toronto, ON M5S</p>
                 <b id="minWalk">8 minute walk</b>
               </td>
           <tr>
-              
           </tr>
       </table>
       

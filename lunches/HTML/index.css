@@ -62,7 +62,6 @@ body {
 .pageCenter{
         margin-right:10%;
         margin-left:10%;
-        background-color:#FAEBC3;
 }
  
 
@@ -97,4 +96,9 @@ fieldset {
         margin-right:auto;
         width:90%;
         height:120px;
+}
+
+.rProfileImage{
+        width:20em;
+        height:20em;
 }

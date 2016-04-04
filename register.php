@@ -85,7 +85,7 @@ if(isset($_POST['submit']))  {
 <head>
   <meta charset="utf-8">
 
-  <title>Curriculum Organizer</title>
+  <title>Rgister</title>
 
  <link href="./lunches/HTML/eats.css" rel="stylesheet" type="text/css">
   <!-- A properly secured site would serve this page over HTTPS (secure HTTP). Why is that? -->
