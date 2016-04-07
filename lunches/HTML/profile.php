@@ -61,15 +61,11 @@
         </tr>
           </tr>
               <td style="background-color:#2E91E3;color:white;padding:1.5em;">
-<<<<<<< HEAD
+
                   <!--Getting the rating system to work, the form that connects the ratings to the database-->
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <p>rate:</p>
-            </form>
-                
-=======
+
                   <b>Rating</b>
-                 <form>
+                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                      1<input type="radio" name="star"/>
                      2<input type="radio" name="star"/>
                      3<input type="radio" name="star"/>
@@ -77,7 +73,7 @@
                      5<input type="radio" name="star"/>
                      <input type="button" name="star" value="submit"/>
                  </form>
->>>>>>> 91fb481683b8b7b94f9fff2b502e7616c5af72cf
+
                 <p id="adress">795 Bathurst St, Toronto, ON M5S</p>
                 <b id="minWalk">8 minute walk</b>
               </td>

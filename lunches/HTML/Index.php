@@ -114,7 +114,7 @@
   <tr>
     <td><a class="Button1" style="padding:0.25em;">Categories</a></td>	
     <td><a href="genius.html" class="Button1" style="padding:0.25em;">Genius Search</a></td>	
-    <td><a class="Button1" style="padding:0.25em;">All Restaurants</a></td>
+    <td><a href="allRestaurants.php" class="button1" style="padding:0.25em;">All Restaurants</a></td>
   </tr>
         </table>
 </center>
