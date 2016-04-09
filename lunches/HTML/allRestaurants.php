@@ -26,7 +26,14 @@
         <h3>All Restaurants</h3>
         </center>
         <br> <br>
-
+        <table style="width: 100%;
+                    text-align: center;">
+            <tr>
+                <th>Restaurant</th>
+                <th>Location</th>
+                <th>Description</th>
+            </tr>
+        </table>
 <?php
     //instantiate the required variables to connect to the db
     $host = "209.236.71.62";
@@ -53,12 +60,22 @@
 
     // Get the row from the database
     
-    echo "<table>";
+    echo "<table style='margin-top: 5px; 
+            text-align: center;
+            padding: 5px; 
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border: 2px solid black;    
+            width:auto;
+            color: #000000;'>";
     while($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
-        echo "<td>", $row["name"],"</td>";
-        echo "<td>", $row["address"], "</td>";
-        echo "<td>", $row["description"], "</td>";
+        echo "<th style= 'width: 30%;
+                border-style: solid;'>", $row["name"],"</td>";
+        echo "<td style= 'width: 30%;
+                border-style: solid;'>", $row["address"], "</td>";
+        echo "<td style= 'width: 40%;
+                border-style: solid;'>", $row["description"], "</td>";
         echo "</tr>";
     }
     echo "</table>";
