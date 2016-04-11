@@ -77,13 +77,8 @@ $query = "SELECT pw, fname FROM user WHERE username = ('" . $provided_username .
         </tr>
           </tr>
               <td style="background-color:#2E91E3;color:white;padding:1.5em;">
-                  <!--Getting the rating system to work, the form that connects the ratings to the database-->
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <p>rate:</p>
-            </form>
-                
                   <b>Rating</b>
-                 <form>
+                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                      1<input type="radio" name="star"/>
                      2<input type="radio" name="star"/>
                      3<input type="radio" name="star"/>
@@ -91,6 +86,7 @@ $query = "SELECT pw, fname FROM user WHERE username = ('" . $provided_username .
                      5<input type="radio" name="star"/>
                      <input type="button" name="star" value="submit"/>
                  </form>
+
                 <p id="adress">795 Bathurst St, Toronto, ON M5S</p>
                 <b id="minWalk">8 minute walk</b>
               </td>
