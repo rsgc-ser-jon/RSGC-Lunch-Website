@@ -29,9 +29,9 @@
         <table style="width: 100%;
                     text-align: center;">
             <tr>
-                <th>Restaurant</th>
-                <th>Location</th>
-                <th>Description</th>
+                <th style ="width: 50%;">Restaurant</th>
+                <th style ="width: 25%;">Location</th>
+                <th style ="width: 25%;">Description</th>
             </tr>
         </table>
 <?php
@@ -49,17 +49,17 @@
     
     // Run the query
     if (isset($_GET['id'])) {
-        $query = "SELECT name, address, description FROM restaurant;";    
+        $query = "SELECT name, address, timeToWalk FROM restaurant;";    
         $cid = $_GET['id'];
     } else {
-        $query = "SELECT name, address, description FROM restaurant;";
+        $query = "SELECT name, address, timeToWalk FROM restaurant;";
         $cid = 1;
     }
     
     $result = mysqli_query($connection, $query);
 
     // Get the row from the database
-    
+    $num = 1;
     echo "<table style='margin-top: 5px; 
             text-align: center;
             padding: 5px; 
@@ -69,14 +69,17 @@
             width:auto;
             color: #000000;'>";
     while($row = mysqli_fetch_assoc($result)) {
+       
         echo "<tr>";
-        echo "<th style= 'width: 30%;
-                border-style: solid;'>", $row["name"],"</td>";
-        echo "<td style= 'width: 30%;
+        echo "<th style= 'width: 50%;
+                border-style: solid;'><a href= 'profile.php?id=",$num,"'>",  $row["name"],"</a></th>";
+                
+        echo "<td style= 'width: 25%;
                 border-style: solid;'>", $row["address"], "</td>";
-        echo "<td style= 'width: 40%;
-                border-style: solid;'>", $row["description"], "</td>";
+        echo "<td style= 'width: 25%;
+                border-style: solid;'>", $row["timeToWalk"], "</td>";
         echo "</tr>";
+        $num +=1;
     }
     echo "</table>";
 ?>
