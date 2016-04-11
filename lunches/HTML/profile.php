@@ -1,12 +1,28 @@
 <!DOCTYPE html>
+<?php
+
+ $host = "209.236.71.62";
+    $user = "mrgogor3_RRUSR";
+    $pass = "fries278\mango";
+    $db = "mrgogor3_RR";
+    $port = 3306;
+    
+    // Establish the connection
+    // (note username and password here is the *database* username and password, not for a user of this website)
+    $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
+
+$query = "SELECT pw, fname FROM user WHERE username = ('" . $provided_username . "');";
+
+?>
+
 <html>
     <head>
         <title>RSGC Lunches</title>
         
-        
             <script>
         
             </script>
+            
     <link rel = "stylesheet" href= "index.css">
     
     </head>
@@ -61,13 +77,11 @@
         </tr>
           </tr>
               <td style="background-color:#2E91E3;color:white;padding:1.5em;">
-<<<<<<< HEAD
                   <!--Getting the rating system to work, the form that connects the ratings to the database-->
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <p>rate:</p>
             </form>
                 
-=======
                   <b>Rating</b>
                  <form>
                      1<input type="radio" name="star"/>
@@ -77,7 +91,6 @@
                      5<input type="radio" name="star"/>
                      <input type="button" name="star" value="submit"/>
                  </form>
->>>>>>> 91fb481683b8b7b94f9fff2b502e7616c5af72cf
                 <p id="adress">795 Bathurst St, Toronto, ON M5S</p>
                 <b id="minWalk">8 minute walk</b>
               </td>
