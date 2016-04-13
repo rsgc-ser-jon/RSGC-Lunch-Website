@@ -28,14 +28,6 @@
     
     $result = mysqli_query($connection, $query);
     
-    // Iterate over the result set
-    $output = "<ul>";
-    while ($row = mysqli_fetch_assoc($result)) {
-        $output .= "<li>";
-        $output .= "<a href=\"./course/?cid=" . urlencode($row['id']) . "\">" . $row['code'] . ": " . $row['name'] . "</a>";
-        $output .= "</li>";
-    }
-    $output .= "</ul>";
 ?>
 
 
