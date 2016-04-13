@@ -62,22 +62,20 @@
     $num = 1;
     echo "<table style='margin-top: 5px; 
             text-align: center;
-            padding: 5px; 
             padding-top: 2px;
             padding-bottom: 2px;
-            border: 2px solid black;    
             width:auto;
             color: #000000;'>";
     while($row = mysqli_fetch_assoc($result)) {
        
-        echo "<tr>";
+        echo "<tr style='padding:7em;'>";
         echo "<th style= 'width: 50%;
-                border-style: solid;'><a href= 'profile.php?id=",$num,"'>",  $row["name"],"</a></th>";
+                '><a style='color:black;text-decoration:none;' href= 'profile.php?id=",$num,"'>",  $row["name"],"</a></th>";
                 
         echo "<td style= 'width: 25%;
-                border-style: solid;'>", $row["address"], "</td>";
+                '>", $row["address"], "</td>";
         echo "<td style= 'width: 25%;
-                border-style: solid;'>", $row["timeToWalk"], "</td>";
+                '>", $row["timeToWalk"], "</td>";
         echo "</tr>";
         $num +=1;
     }

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 
  $host = "209.236.71.62";
@@ -10,13 +9,23 @@
     // Establish the connection
     // (note username and password here is the *database* username and password, not for a user of this website)
 $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
+
+if(isset($_GET['id'])){
+    $query = "SELECT name, walkingdistance, timeToWalk, address, description, imageName, menu FROM restaurant WHERE id = " . $_GET['id'] . ";";
+} else {
+    $query = "SELECT name, timeToWalk, address, description, imageName, menu FROM restaurant WHERE id = 1;";
+}
+//  get result
 $result = mysqli_query($connection, $query);
-$query = "SELECT name, walkingdistance, timeToWalk, address, description, imageName, menu FROM restaurant WHERE id = " . $_GET['id'] . ";";
-$row = mysqli_fetch_row($result);
+// print_r($result);
+// die();
+// fetch a specific row
+$row = mysqli_fetch_assoc($result);
 
 
 ?>
 
+<<<<<<< HEAD
 <?php
     // Check whether session created (is user logged in?)
     // If not, re-direct to main index page.
@@ -48,6 +57,10 @@ $row = mysqli_fetch_row($result);
     $result = mysqli_query($connection, $query);
     
 ?>
+=======
+<!DOCTYPE html>
+
+>>>>>>> beb2689446d7e0c7e27f3cb810b84244e6c0b8f2
 
 <html>
     <head>
@@ -93,7 +106,7 @@ $row = mysqli_fetch_row($result);
         </style>
             <td style="background-color:#065da5;color:white;font-size:2em;">
                 <center>
-                <b id="rName">George's Deli</b>  
+                <b id="rName"> <?php echo $row['name']; ?></b>  
                 </center>
             </td>
         </tr>
@@ -109,8 +122,8 @@ $row = mysqli_fetch_row($result);
                      <input type="submit" name="submit" value="submit"/>
                  </form>
 
-                <p id="adress">795 Bathurst St, Toronto, ON M5S</p>
-                <b id="minWalk">8 minute walk</b>
+                <p id=""><?php echo $row['address']; ?></p>
+                <b id=""><?php echo $row['timeToWalk']; ?></b>
               </td>
           <tr>
           </tr>
