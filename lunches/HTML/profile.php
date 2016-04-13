@@ -1,32 +1,4 @@
 <?php
-
- $host = "209.236.71.62";
-    $user = "mrgogor3_RRUSR";
-    $pass = "fries278\mango";
-    $db = "mrgogor3_RR";
-    $port = 3306;
-    
-    // Establish the connection
-    // (note username and password here is the *database* username and password, not for a user of this website)
-$connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
-
-if(isset($_GET['id'])){
-    $query = "SELECT name, walkingdistance, timeToWalk, address, description, imageName, menu FROM restaurant WHERE id = " . $_GET['id'] . ";";
-} else {
-    $query = "SELECT name, timeToWalk, address, description, imageName, menu FROM restaurant WHERE id = 1;";
-}
-//  get result
-$result = mysqli_query($connection, $query);
-// print_r($result);
-// die();
-// fetch a specific row
-$row = mysqli_fetch_assoc($result);
-
-
-?>
-
-<<<<<<< HEAD
-<?php
     // Check whether session created (is user logged in?)
     // If not, re-direct to main index page.
     session_start();
@@ -57,17 +29,47 @@ $row = mysqli_fetch_assoc($result);
     $result = mysqli_query($connection, $query);
     
 ?>
-=======
+<?php
+
+    $host = "209.236.71.62";
+    $user = "mrgogor3_RRUSR";
+    $pass = "fries278\mango";
+    $db = "mrgogor3_RR";
+    $port = 3306;
+    
+    // Establish the connection
+    // (note username and password here is the *database* username and password, not for a user of this website)
+$connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
+
+if(isset($_GET['id'])){
+    $query = "SELECT name, timeToWalk, address, description, imageName, menu FROM restaurant WHERE id = " . $_GET['id'] . ";";
+} else {
+    $query = "SELECT name, timeToWalk, address, description, imageName, menu FROM restaurant WHERE id = 1;";
+}
+//  get result
+$result = mysqli_query($connection, $query);
+// print_r($result);
+// die();
+// fetch a specific row
+$row = mysqli_fetch_assoc($result);
+
+?>
+
+
 <!DOCTYPE html>
-
->>>>>>> beb2689446d7e0c7e27f3cb810b84244e6c0b8f2
-
 <html>
     <head>
         <title>RSGC Lunches</title>
         
             <script>
-        
+            function $(id){
+	        return document.getElementById(id);}
+	        
+            function thanks(){
+                alert("Thank you for submitting a rating, it has been added to the database.");
+                $("submitButton").innerHTML = "<p></p>"
+                $("5").innerHTML = "<p></p>"
+            }
             </script>
             
     <link rel = "stylesheet" href= "index.css">
@@ -91,15 +93,15 @@ $row = mysqli_fetch_assoc($result);
       
       <table style="width:100%;margin-top:3em;">
           <tr>
-              <td style="width:30%;height:50%;border-radius:10px;"><img class="rProfileImage" style="border-radius:10px;" src="Images/aziz.png"></td>
+              <td style="width:30%;height:50%;border-radius:10px;">
+              <img class="rProfileImage" style="border-radius:10px;" src="Profile_Images/<?php echo $row['imageName']; ?>"></td>
               <td style="background-color:white;padding:3em;position:relative;z-index:1;border-radius:10px;" rowspan="3">
-            
             <h2>Description</h2>
             
             <p>
-                
+               <?php echo $row['description']; ?> 
             </p>
-        <?php echo $row['description']; ?>
+        
             </td>
         <tr style="background-color:white;">
         </style>
@@ -114,12 +116,12 @@ $row = mysqli_fetch_assoc($result);
               <td style="background-color:#2E91E3;color:white;padding:1.5em;">
                   <b>Rating</b>
                  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                     1<input type="radio" name="1"/>
-                     2<input type="radio" name="2"/>
-                     3<input type="radio" name="3"/>
-                     4<input type="radio" name="4"/>
-                     5<input type="radio" name="5"/>
-                     <input type="submit" name="submit" value="submit"/>
+                     1<input type="radio" name="1" id="5"/>
+                     2<input type="radio" name="2" id="5"/>
+                     3<input type="radio" name="3" id="5"/>
+                     4<input type="radio" name="4" id="5"/>
+                     5<input type="radio" name="5" id="5"/>
+                     <input type="submit" name="submit" value="submit" onclick = "thanks()" id="submitButton"/>
                  </form>
 
                 <p id=""><?php echo $row['address']; ?></p>

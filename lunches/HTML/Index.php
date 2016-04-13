@@ -129,7 +129,54 @@
     <p style="text-align:center"><strong>Popular Among Students</strong></p>
     <!--contains the info as to what each restaurant has... restaurants stats.-->
     
+    <?php
+    //instantiate the required variables to connect to the db
+    $host = "209.236.71.62";
+    $user = "mrgogor3_RRUSR";
+    $pass = "fries278\mango";
+    $db = "mrgogor3_RR";
+    $port = 3306;
     
+    
+    // Establish the connection
+    // (note username and password here is the *database* username and password, not for a user of this website)
+    $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
+    
+    // Run the query
+    if (isset($_GET['id'])) {
+        $query = "SELECT name, address, timeToWalk FROM restaurant;";    
+        $cid = $_GET['id'];
+    } else {
+        $query = "SELECT name, address, timeToWalk FROM restaurant;";
+        $cid = 1;
+    }
+    
+    $result = mysqli_query($connection, $query);
+
+    // Get the row from the database
+    $num = 1;
+    echo "<table style='margin-top: 5px; 
+            text-align: center;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width:auto;
+            color: #000000;'>";
+    while($row = mysqli_fetch_assoc($result)) {
+       
+        echo "<tr style='padding:7em;'>";
+        echo "<th style= 'width: 50%;
+                '><a style='color:black;text-decoration:none;' href= 'profile.php?id=",$num,"'>",  $row["name"],"</a></th>";
+                
+        echo "<td style= 'width: 25%;
+                '>", $row["address"], "</td>";
+        echo "<td style= 'width: 25%;
+                '>", $row["timeToWalk"], "</td>";
+        echo "</tr>";
+        $num +=1;
+    }
+    echo "</table>";
+?>
+
     <fieldset>
     <table class= "infoTable">
         <tr>
