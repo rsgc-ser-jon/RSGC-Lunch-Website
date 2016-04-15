@@ -84,7 +84,7 @@
 <center>
 <table height="70px">
     <tr>
-        <td class="">RSGC Lunch Routes</td>
+        <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
         <td><button class="Button1" style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></td>
         <td><input type="text" value="" class="search" id="RestaurantSearch" style="height:2em;width:40em;"></td>
         <td><a href="Logout.php"><button class="Button1" style="font-size:15pt;background-color:#7FBCEF:">Sign-Out</button></a></td>
@@ -104,7 +104,7 @@
 <center>
         <table class = "header" style="width:70%;">
   <tr>
-    <td><a class="Button1" style="padding:0.25em;">Categories</a></td>	
+    <td><a href="categories.php" class="Button1" style="padding:0.25em;">Categories</a></td>	
     <td><a href="genius.html" class="Button1" style="padding:0.25em;">Genius Search</a></td>	
     <td><a href="allRestaurants.php" class="Button1" style="padding:0.25em;">All Restaurants</a></td>
   </tr>
@@ -157,9 +157,33 @@
     $result = mysqli_query($connection, $query);
     
     // Get the row from the database
+<<<<<<< HEAD
     $row = mysqli_fetch_assoc($result);
 
 
+=======
+    $num = 1;
+    echo "<table style='margin-top: 5px; 
+            text-align: center;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width:auto;
+            color: #000000;'>";
+    while($row = mysqli_fetch_assoc($result)) {
+       
+        echo "<tr style='border:7px;'>";
+        echo "<td style= 'width: 50%;
+                '><a style='color:black;text-decoration:none;' href= 'profile.php?id=",$num,"'>",  $row["name"],"</a></td>";
+                
+        echo "<td style= 'width: 25%;
+                '>", $row["address"], "</td>";
+        echo "<td style= 'width: 25%;
+                '>", $row["timeToWalk"], "</td>";
+        echo "</tr>";
+        $num +=1;
+    }
+    echo "</table>";
+>>>>>>> 5a5cea1e2f99361e4f89c41a9f0830739ff8a472
 ?>
 
     <fieldset>

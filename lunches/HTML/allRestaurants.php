@@ -11,7 +11,7 @@
         <center>
         <table height="70px">
             <tr>
-                <td class="">RSGC Lunch Routes</td>
+                <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
                 <td><button class="Button1" style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></td>
                 <td><input type="text" value="" class="search" id="RestaurantSearch" style="height:2em;width:40em;"></td>
                 <td><a href="Logout.php"><button class="Button1" style="font-size:15pt;background-color:#7FBCEF:">Sign-Out</button></a></td>
@@ -26,14 +26,6 @@
         <h3>All Restaurants</h3>
         </center>
         <br> <br>
-        <table style="width: 100%;
-                    text-align: center;">
-            <tr>
-                <th style ="width: 50%;">Restaurant</th>
-                <th style ="width: 25%;">Location</th>
-                <th style ="width: 25%;">Description</th>
-            </tr>
-        </table>
 <?php
     //instantiate the required variables to connect to the db
     $host = "209.236.71.62";
@@ -65,18 +57,23 @@
             padding-top: 2px;
             padding-bottom: 2px;
             width:auto;
-            color: #000000;'>";
+            color: #000000;'>
+            <tr>
+                <th style ='width: 50%;'>Restaurant</th>
+                <th style ='width: 25%;'>Location</th>
+                <th style ='width: 25%;'>Description</th>
+            </tr style='padding-bottom:1em;'>";
+            
     while($row = mysqli_fetch_assoc($result)) {
        
-        echo "<tr style='padding:7em;'>";
-        echo "<th style= 'width: 50%;
-                '><a style='color:black;text-decoration:none;' href= 'profile.php?id=",$num,"'>",  $row["name"],"</a></th>";
-                
+       
+        echo "<tr style='border:1px;'>";
+        echo "<td style='width:50%;border:7px;'><b><a style='color:black;text-decoration:none;background-color;' href='profile.php?id=" . $num . "'>" .  $row["name"] . "</a></b></td>";
         echo "<td style= 'width: 25%;
-                '>", $row["address"], "</td>";
+                '>". $row["address"]. "</td>";
         echo "<td style= 'width: 25%;
-                '>", $row["timeToWalk"], "</td>";
-        echo "</tr>";
+                '>". $row["timeToWalk"]. "</td>";
+        echo "</tr></div>";
         $num +=1;
     }
     echo "</table>";
