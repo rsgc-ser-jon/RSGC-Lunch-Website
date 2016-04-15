@@ -141,48 +141,40 @@
     // Establish the connection
     // (note username and password here is the *database* username and password, not for a user of this website)
     $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
+
+
+// Get the provided course id
+    $provided_id = htmlspecialchars($_GET['id']);
     
     // Run the query
     if (isset($_GET['id'])) {
-        $query = "SELECT name, address, timeToWalk FROM restaurant;";    
-        $cid = $_GET['id'];
+        $query = "SELECT name, address, timeToWalk FROM restaurant WHERE id = " . $_GET['id'] . ";";    
+        $rid = $_GET['course_id'];
     } else {
-        $query = "SELECT name, address, timeToWalk FROM restaurant;";
-        $cid = 1;
+        $query = "SELECT name, address, timeToWalk FROM restaurant WHERE id = 1;";
+        $rid = 1;
     }
-    
     $result = mysqli_query($connection, $query);
-
+    
     // Get the row from the database
-    $num = 1;
-    echo "<table style='margin-top: 5px; 
-            text-align: center;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            width:auto;
-            color: #000000;'>";
-    while($row = mysqli_fetch_assoc($result)) {
-       
-        echo "<tr style='padding:7em;'>";
-        echo "<th style= 'width: 50%;
-                '><a style='color:black;text-decoration:none;' href= 'profile.php?id=",$num,"'>",  $row["name"],"</a></th>";
-                
-        echo "<td style= 'width: 25%;
-                '>", $row["address"], "</td>";
-        echo "<td style= 'width: 25%;
-                '>", $row["timeToWalk"], "</td>";
-        echo "</tr>";
-        $num +=1;
-    }
-    echo "</table>";
+    $row = mysqli_fetch_assoc($result);
+
+
 ?>
 
     <fieldset>
-    <table class= "infoTable">
+    <table class= "infoTable" style = "width:100%;">
         <tr>
-            <td><button onclick = "change_image(-1)" class= "Button1">Previous</button></td>
-            <td><img src="Images/GeorgesBurgerIndex.gif" id="sShow" class="sShow"></td>
-            <td><button onclick = "change_image(1)" class= "Button1">Next</button></td>
+            <th rowspan="2"> <a href="Index.php?id=<?php echo $rid-3; ?>"><button  class= "Button1">Previous</button></a></th>
+            <th>Restaurant Name</th>
+            <th> Address</th>
+            <th> Time To Walk</th>
+            <th rowspan="2"><a href="Index.php?id=<?php echo $rid+3; ?>"><button  class= "Button1">Next</button></a></th>
+        </tr>
+        <tr>
+            <td style = "text-align: center;"><b><?php echo $row['name']?></b></td>
+            <td style = "text-align: center;"><?php echo $row['address']?></td>
+            <td style = "text-align: center;"><?php echo $row['timeToWalk']?></td>
         </tr>
     </table>
     </fieldset>
