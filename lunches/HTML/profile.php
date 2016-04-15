@@ -80,7 +80,7 @@ $row = mysqli_fetch_assoc($result);
 <center>
 <table height="70px">
     <tr>
-        <td class="">RSGC Lunch Routes</td>
+        <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
         <td><button class="Button1" style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></td>
         <td><input type="text" value="" class="search" id="RestaurantSearch" style="height:2em;width:40em;"></td>
         <td><button class="Button1" style="font-size:15pt;background-color:#7FBCEF:">Sign-Out</button></td>
@@ -100,6 +100,10 @@ $row = mysqli_fetch_assoc($result);
             
             <p>
                <?php echo $row['description']; ?> 
+               <br>
+                <br>
+               <a href="<?php echo $row['menu']; ?>" value="Menu">
+                   <b>Menu</b></a>
             </p>
         
             </td>
