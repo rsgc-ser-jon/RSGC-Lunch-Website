@@ -1,3 +1,34 @@
+<?php
+    // Check whether session created (is user logged in?)
+    // If not, re-direct to main index page.
+    session_start();
+    if(!isset($_SESSION['fname']))
+    {
+        // Not logged in, re-direct to the login page
+        $host  = $_SERVER['HTTP_HOST'];
+        $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+        $extra = 'index.php';
+        header("Location: https://lunches-official-rsgc-kelly-c.c9users.io/lunches/login.php");
+        exit;
+    }
+    // Show list of courses on home page 
+    // Connect to database
+    $host = "209.236.71.62";
+    $user = "mrgogor3_RRUSR";
+    $pass = "fries278\mango";
+    $db = "mrgogor3_RR";
+    $port = 3306;
+    
+    // Establish the connection
+    // (note username and password here is the *database* username and password, not for a user of this website)
+    $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
+    
+    // And now perform simple query – make sure it's working
+    $query = "SELECT fname, lname , pw FROM user;";
+    
+    $result = mysqli_query($connection, $query);
+    
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,7 +56,7 @@
         <td><button class="Button1" style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></td>
         <td><input type="text" value="" class="search" id="RestaurantSearch" style="height:2em;width:40em;"></td>
         <td><button class="Button1" style="font-size:15pt;background-color:#7FBCEF:">Sign-Out</button></td>
-        <td style="font-size:24pt">| Billy Bob</td>
+        <td style="font-size:24pt">| <?php echo $_SESSION['fname']; ?></td>
     </tr>
 </table>
 </center>
