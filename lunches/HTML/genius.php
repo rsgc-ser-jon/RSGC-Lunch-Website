@@ -89,13 +89,14 @@
        $query = "SELECT name, address, timeToWalk FROM restaurant"; 
     }
     
-    else if($provided_TTW == "No Preference"){
+    else if($provided_TTW == "No Preference" && $provided_category != "No Preference"){
         $query = "SELECT name, address, timeToWalk FROM restaurant WHERE category = ('" . $provided_category . "');";
-    } else if($provided_category == "No Preference"){
-        $query = "SELECT name, address, timeToWalk FROM restaurant WHERE timeToWalk = ('" . $provided_TTW . "');";
+    } else if($provided_category == "No Preference" && $provided_TTW != "No Preference"){
+        $query = "SELECT name, address, timeToWalk FROM restaurant WHERE timeToWalk = ('" . $provided_TTW . " min walk');";
     } else {
-      $query = "SELECT name, address, timeToWalk FROM restaurant WHERE category = ('" . $provided_category . "') AND timeToWalk =('" . $provided_TTW . "');";
+      $query = "SELECT name, address, timeToWalk FROM restaurant WHERE category = ('" . $provided_category . "') AND timeToWalk =('" . $provided_TTW . " min walk');";
     }
+
     
     $result = mysqli_query($connection, $query);
      
