@@ -16,6 +16,16 @@ h1
 	margin: -0.2em -0.5em 0.5em -0.5em;
 }
 
+h1 tr {
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
 #bgrnd
 {
   background: url("Images/Sushi.jpg") no-repeat center fixed; 
@@ -65,9 +75,20 @@ h1
 	border:none;
 	width:4.em;	
 	Height:1.6em;
-	font-size:24pt;
+	font-size:2em;
 }
 
+.ButtonC
+{
+	color:white;
+	background-color:#FE7500;
+	border-radius:5px;
+	border:none;
+	width:4.em;
+	
+	Height:1.6em;
+	font-size:2em;
+}
 
 h1{
 	font-family:Arial;

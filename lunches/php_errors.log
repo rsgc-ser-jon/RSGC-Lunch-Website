@@ -1,0 +1,65 @@
+[11-Apr-2016 16:16:08 UTC] PHP Warning:  mysqli_query(): Empty query in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 13
+[11-Apr-2016 16:16:08 UTC] PHP Stack trace:
+[11-Apr-2016 16:16:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[11-Apr-2016 16:16:08 UTC] PHP   2. mysqli_query(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:13
+[11-Apr-2016 16:16:08 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 15
+[11-Apr-2016 16:16:08 UTC] PHP Stack trace:
+[11-Apr-2016 16:16:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[11-Apr-2016 16:16:08 UTC] PHP   2. mysqli_fetch_row(*uninitialized*) /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:15
+[11-Apr-2016 16:21:00 UTC] PHP Warning:  mysqli_query(): Empty query in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 13
+[11-Apr-2016 16:21:00 UTC] PHP Stack trace:
+[11-Apr-2016 16:21:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[11-Apr-2016 16:21:00 UTC] PHP   2. mysqli_query(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:13
+[11-Apr-2016 16:21:00 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 15
+[11-Apr-2016 16:21:00 UTC] PHP Stack trace:
+[11-Apr-2016 16:21:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[11-Apr-2016 16:21:00 UTC] PHP   2. mysqli_fetch_row(*uninitialized*) /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:15
+[11-Apr-2016 16:23:59 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 22
+[11-Apr-2016 16:23:59 UTC] PHP Stack trace:
+[11-Apr-2016 16:23:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[11-Apr-2016 16:23:59 UTC] PHP   2. mysqli_fetch_row() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:22
+[11-Apr-2016 16:25:33 UTC] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 22
+[11-Apr-2016 16:25:33 UTC] PHP Stack trace:
+[11-Apr-2016 16:25:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[11-Apr-2016 16:25:33 UTC] PHP   2. mysqli_fetch_row() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:22
+[11-Apr-2016 16:26:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 22
+[11-Apr-2016 16:26:31 UTC] PHP Stack trace:
+[11-Apr-2016 16:26:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[11-Apr-2016 16:26:31 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:22
+[11-Apr-2016 16:29:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 21
+[11-Apr-2016 16:29:21 UTC] PHP Stack trace:
+[11-Apr-2016 16:29:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[11-Apr-2016 16:29:21 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:21
+[12-Apr-2016 02:12:40 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/allRestaurants.php on line 48
+[12-Apr-2016 02:12:40 UTC] PHP Stack trace:
+[12-Apr-2016 02:12:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/allRestaurants.php:0
+[12-Apr-2016 02:12:40 UTC] PHP   2. mysqli_connect(*uninitialized*, *uninitialized*, *uninitialized*, *uninitialized*, *uninitialized*) /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/allRestaurants.php:48
+[13-Apr-2016 15:53:41 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 23
+[13-Apr-2016 15:53:41 UTC] PHP Stack trace:
+[13-Apr-2016 15:53:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[13-Apr-2016 15:53:41 UTC] PHP   2. mysqli_fetch_assoc(*uninitialized*) /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:23
+[13-Apr-2016 15:53:52 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 23
+[13-Apr-2016 15:53:52 UTC] PHP Stack trace:
+[13-Apr-2016 15:53:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[13-Apr-2016 15:53:52 UTC] PHP   2. mysqli_fetch_assoc(*uninitialized*) /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:23
+[13-Apr-2016 16:04:15 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 23
+[13-Apr-2016 16:04:15 UTC] PHP Stack trace:
+[13-Apr-2016 16:04:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[13-Apr-2016 16:04:15 UTC] PHP   2. mysqli_fetch_assoc(*uninitialized*) /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:23
+[13-Apr-2016 16:04:15 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 23
+[13-Apr-2016 16:04:16 UTC] PHP Stack trace:
+[13-Apr-2016 16:04:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[13-Apr-2016 16:04:16 UTC] PHP   2. mysqli_fetch_assoc(*uninitialized*) /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:23
+[13-Apr-2016 16:04:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php on line 23
+[13-Apr-2016 16:04:21 UTC] PHP Stack trace:
+[13-Apr-2016 16:04:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:0
+[13-Apr-2016 16:04:21 UTC] PHP   2. mysqli_fetch_assoc(*uninitialized*) /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/profile.php:23
+[15-Apr-2016 16:20:51 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/Index.php on line 160
+[15-Apr-2016 16:20:53 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/Index.php on line 160
+[15-Apr-2016 16:21:29 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/Index.php on line 160
+[15-Apr-2016 16:23:53 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/Index.php on line 160
+[15-Apr-2016 16:23:55 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/Index.php on line 160
+[21-Apr-2016 16:28:27 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/Index.php on line 162
+[21-Apr-2016 16:28:29 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/Index.php on line 162
+[25-Apr-2016 13:23:55 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/Index.php on line 162
+[25-Apr-2016 13:24:18 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/ubuntu/workspace/RSGC-Lunch-Website/lunches/HTML/Index.php on line 162
