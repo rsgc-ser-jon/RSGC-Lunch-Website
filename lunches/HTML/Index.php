@@ -159,7 +159,6 @@
     // Get the row from the database
     $row = mysqli_fetch_assoc($result);
 
-
 ?>
 
     <fieldset>

@@ -70,6 +70,15 @@ $row = mysqli_fetch_assoc($result);
                 $("submitButton").innerHTML = "<p></p>"
                 $("5").innerHTML = "<p></p>"
             }
+            
+            function radio(x){
+                var x = this.x;
+                parseFloat(this.x);
+                
+                if(x-1 != 0){
+                    $(x).innerHTML = x+"<input type='radio' name='"+x+ "' id='"+x+ "' checked />"
+                }
+            }
             </script>
             
     <link rel = "stylesheet" href= "index.css">
@@ -120,11 +129,11 @@ $row = mysqli_fetch_assoc($result);
               <td style="background-color:#2E91E3;color:white;padding:1.5em;">
                   <b>Rating</b>
                  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                     1<input type="radio" name="1" id="5"/>
-                     2<input type="radio" name="2" id="5"/>
-                     3<input type="radio" name="3" id="5"/>
-                     4<input type="radio" name="4" id="5"/>
-                     5<input type="radio" name="5" id="5"/>
+                     1<input type="radio" name="1" id="1" onclick = "radio(1)"/>
+                     2<input type="radio" name="2" id="2" onclick = "radio(2)"/>
+                     3<input type="radio" name="3" id="3" onclick = "radio(3)"/>
+                     4<input type="radio" name="4" id="4" onclick = "radio(4)"/>
+                     5<input type="radio" name="5" id="5" onclick = "radio(5)"/>
                      <input type="submit" name="submit" value="submit" onclick = "thanks()" id="submitButton"/>
                  </form>
 

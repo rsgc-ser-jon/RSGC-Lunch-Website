@@ -38,6 +38,24 @@
     $output .= "</ul>";
 ?>
 
+<?php
+
+$host = "209.236.71.62";
+    $user = "mrgogor3_RRUSR";
+    $pass = "fries278\mango";
+    $db = "mrgogor3_RR";
+    $port = 3306;
+    
+    // Establish the connection
+    // (note username and password here is the *database* username and password, not for a user of this website)
+    $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
+    
+    $selectedCategory = htmlspecialchars($_POST['category']);
+    // And now perform simple query – make sure it's working
+    $query = "SELECT category, FROM restaurant WHERE category=('" . $selectedCategory . "');";
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -70,23 +88,36 @@
   </table>
   </center>
   </h1>  
-     <div class="pageCenter">
-        
-        <br>
-        <!--Genius Search Format-->
-        
-
-<div class="container">
-  <h3>Inline List</h3>
-  <ul class="list-inline">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Menu 1</a></li>
-    <li><a href="#">Menu 2</a></li>
-    <li><a href="#">Menu 3</a></li>
-  </ul>
-</div>
-
- </div>
+     <div class="pageCenter" style="margin-top:2em;">
+        <center>
+          <table>
+              <tr>
+                  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                      
+                    <input class="Button1" type="submit" name="Bar Food"  value="Bar Food"/>
+                    <input class="Button1" type="submit" name="Breakfast"  value="Breakfast"/>
+                    <input class="Button1" type="submit" name="Burger"  value="Burger"/>
+                    <input class="Button1" type="submit" name="Chicken"  value="Chicken"/>
+                    <input class="Button1" type="submit" name="Crepes"  value="Crepes"/>
+                    <input class="Button1" type="submit" name="Ice Cream"  value="Ice Cream"/>
+                    <input class="Button1" type="submit" name="Japanese"  value="Japanese"/>
+                    </form>
+              </tr>
+        </table>
+        <table>
+              <tr>
+                  <form>
+                    <input class="Button1" type="submit" name="Mexican"  value="Mexican"/>
+                    <input class="Button1" type="submit" name="Pizza"  value="Pizza"/>
+                    <input class="Button1" type="submit" name="Poutine"  value="Poutine"/>
+                    <input class="Button1" type="submit" name="Sandwich"  value="Sandwich"/>
+                    <input class="Button1" type="submit" name="Schnitzel"  value="Schnitzel"/>
+                    <input class="Button1" type="submit" name="Shawarma"  value="Shawarma"/>
+                 </form>
+              </tr>
+          </table>
+        </center>
+     </div>
  <img src="Images/Footer.png" style="margin-bottom:-20px;margin-top:-400px;margin-left:-8px;width:101.23%;vertical-align:bottom;z-index:-1;position:relative;">
 </body>
 

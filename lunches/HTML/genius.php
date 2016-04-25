@@ -42,10 +42,17 @@
             <th>
                 Type: <select name = "category" class="Button1" style="font-size:15pt;background-color:#065da5;">
                         <option name= "nP">No Preference</option>
-                        <option name= "burger">Burger</option>
-                        <option name= "pasta">Pasta</option>
-                        <option name= "poutine">Poutine</option>
-                        <option name= "pizza">Pizza</option>
+                        <option name= "Burger">Burger</option>
+                        <option name= "Bar Food">Bar Food</option>
+                        <option name= "Poutine">Poutine</option>
+                        <option name= "Pizza">Pizza</option>
+                        <option name= "Mexican">Mexican</option>
+                        <option name= "Crepes">Crepes</option>
+                        <option name= "Schnitzel">Schnitzel</option>
+                        <option name= "Japanese">Japanese</option>
+                        <option name= "Shwarama">Schwarma</option>
+                        <option name= "Ice Cream">Ice Cream</option>
+                        <option name= "Breakfast">Breakfast</option>
                     </select> 
             </th>
             <th>
@@ -82,13 +89,14 @@
        $query = "SELECT name, address, timeToWalk FROM restaurant"; 
     }
     
-    else if($provided_TTW == "No Preference"){
+    else if($provided_TTW == "No Preference" && $provided_category != "No Preference"){
         $query = "SELECT name, address, timeToWalk FROM restaurant WHERE category = ('" . $provided_category . "');";
-    } else if($provided_category == "No Preference"){
-        $query = "SELECT name, address, timeToWalk FROM restaurant WHERE timeToWalk = ('" . $provided_TTW . "');";
+    } else if($provided_category == "No Preference" && $provided_TTW != "No Preference"){
+        $query = "SELECT name, address, timeToWalk FROM restaurant WHERE timeToWalk = ('" . $provided_TTW . " min walk');";
     } else {
-      $query = "SELECT name, address, timeToWalk FROM restaurant WHERE category = ('" . $provided_category . "') AND timeToWalk =('" . $provided_TTW . "');";
+      $query = "SELECT name, address, timeToWalk FROM restaurant WHERE category = ('" . $provided_category . "') AND timeToWalk =('" . $provided_TTW . " min walk');";
     }
+
     
     $result = mysqli_query($connection, $query);
      
@@ -106,6 +114,7 @@
                 '><a style='color:black;text-decoration:none;' href= 'profile.php?id=",$num,"'>",  $row["name"],"</a></th>";
                 
         echo "<td style= 'width: 25%;
+                text-align: center;
                 '>", $row["address"], "</td>";
         echo "<td style= 'width: 25%;
                 '>", $row["timeToWalk"], "</td>";
