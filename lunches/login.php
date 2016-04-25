@@ -63,7 +63,7 @@ if(isset($_POST['submit']))  {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RSGC Eats</title>
+<title>RSGC Lunches</title>
 <link href="HTML/eats.css" rel="stylesheet" type="text/css">
 </head>
 
