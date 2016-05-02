@@ -72,8 +72,11 @@
 <script src="jquery-1.11.2.min.js">
 
 </script>
+
         
 <script type="text/javascript">
+        function $(id){
+	        return document.getElementById(id);}
 //When the "Document" has loaded....
 $(document).ready(function(){
 //use the css to change "body's" opacity to 0
