@@ -68,6 +68,24 @@
         
             
             </script>
+            
+<script src="jquery-1.11.2.min.js">
+
+</script>
+        
+<script type="text/javascript">
+//When the "Document" has loaded....
+$(document).ready(function(){
+//use the css to change "body's" opacity to 0
+$("body").css({opacity: 0});
+
+$("body").delay(1000).animate({opacity: 1}, 1250);
+$("#overlay").delay(2000).fadeOut(2000);
+
+});
+
+
+</script>
     <link rel = "stylesheet" href= "index.css">
     
     </head>
@@ -78,7 +96,12 @@
     
     
     <body>
+        
+<div id="overlay">
     
+    <p class="overlayText">RSGC Lunches</p>
+    
+</div style="background-color:#FAEBC3;">
  
 <h1>
 <center>
@@ -222,7 +245,7 @@
     <!--  </table>-->
     <!--</fieldset>-->
     
-    <p><a href = "mailto:ckelly@rsgc.on.ca?Subject=Hello" style="text-decoration:none;color:black;">Contact Us</a></p>
+    <p><a href = "mailto:ckelly@rsgc.on.ca?Subject=Hello">Contact Us</a></p>
     
     <!--closing tag for momba... header that wraps the entire page-->
     </div> 

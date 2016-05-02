@@ -109,3 +109,9 @@ h1{
 		width:100%;
 }
 
+.contact{
+	font-weight: bold;
+	color:white;
+	background-color:#0f71c0; 
+	text-decoration:none
+}

@@ -49,7 +49,8 @@ body {
         font-family:arial;
         width:100%;}
 
-.search {width:200px;
+.
+h {width:200px;
 }
 .sButton {border-radius:25px;
         height:20px;
@@ -101,4 +102,26 @@ fieldset {
 .rProfileImage{
         width:20em;
         height:20em;
+}
+
+#overlay{
+    opacity:1;
+    background-color:#2E91E3;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}
+
+.overlayText
+{
+        font-weight:bold;
+        font-family: arial;
+        color:#FFF;
+        font-size:5em;
+        text-shadow: 5px 5px 5px #1D67A3;
+        text-align: center;
+        margin-top: 3em;
 }
