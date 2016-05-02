@@ -99,6 +99,7 @@ if(isset($_POST['submit']))  {
 <h1 style="
 	background-color:#0f71c0;
 	color:white;
+	height:1.3em;
 	font-weight:bold;
 	font-size:30pt;
 	padding:0.8em;
