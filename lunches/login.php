@@ -81,11 +81,9 @@ Username: <input name="username" type="text" style="width:50%;height:2em;" value
 <br>
 Password:<input name="password" type="password" style="margin-left:5px;width:50%;height:2em;"value="<?php echo $_POST['pw'] ?>" maxlength="45" size="45"> <br><?php echo $message['pw']; ?>
 <br>
-<br>
-<input type="submit" value="Sign In" class="Button1" name="submit">
-<a href= "register.php"><input type="button" value="Sign Up" class="Button1" style="background-color:#0CB3EE;"></a>
+<input type="submit" value="Sign In" class="Button1" name="submit" style="margin-right:0.2em">
+<a href= "register.php"><input type="button" value="Sign Up" class="Button1" style="background-color:#0CB3EE;" style="margin-left:0.2em"></a>
 </form>
-
 </center>
 </div>
 
