@@ -67,7 +67,7 @@ if(isset($_POST['submit']))  {
 <link href="HTML/eats.css" rel="stylesheet" type="text/css">
 </head>
 
-<body style="background-color:#1B3B91" id="bgrnd">
+<body style="background-color:#1B3B91" id="bgrnd" OnLoad="document.myform.username.focus();">
 <!--HEADER IMAGE-->
 <img src="HTML/Images/Header1.png" style="margin-top:-8px;margin-left:-8px;width:101.23%;z-index:-1;position:relative;">
 

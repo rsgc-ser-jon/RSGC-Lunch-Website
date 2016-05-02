@@ -78,6 +78,7 @@ $host = "209.236.71.62";
   <h1>
   <center>
   <table height="70px">
+      
     <tr>
         <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
         <td><button class="Button1" style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></td>
@@ -86,38 +87,87 @@ $host = "209.236.71.62";
         <td style="font-size:20pt">| <?php echo $_SESSION['fname']; ?></td>
     </tr>
   </table>
+  
+  
   </center>
+  
+  
   </h1>  
      <div class="pageCenter" style="margin-top:2em;">
-        <center>
-          <table>
-              <tr>
+         <br><br><br>
+         <center>
                   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <table style=style='margin-top: 5px; 
+            text-align: center;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width:auto;
+            color: #000000;'>
+                    <tr>
+                        <td style = "width: 50%;"><h3>Select a category:</h3></td>
+                        <td style = "width: 25%;"><select name = "category" class="Button1" style="font-size:15pt;background-color:#065da5;">
+                          <option name = "Bar Food">Bar Food</option><br>
+                          <option name = "Breakfast">Breakfast</option><br>
+                          <option name = "Burger">Burger</option><br>
+                          <option name = "Chicken">Chicken</option><br>
+                          <option name = "Crepes">Crepes</option><br>
+                          <option name = "Ice Cream">Ice Cream</option><br>
+                          <option name = "Japanese">Japanese</option><br>
+                          <option name = "Mexican">Mexican</option><br>
+                          <option name = "Pizza">Pizza</option><br>
+                          <option name = "Poutine">Poutine</option><br>
+                          <option name = "Sandwich">Sandwiches</option><br>
+                          <option name = "Schnitzel">Schnitzel</option><br>
+                          <option name = "Shawarma">Shawarma</option><br>
+                      </select></td>
                       
-                    <input class="Button1" type="submit" name="Bar Food"  value="Bar Food"/>
-                    <input class="Button1" type="submit" name="Breakfast"  value="Breakfast"/>
-                    <input class="Button1" type="submit" name="Burger"  value="Burger"/>
-                    <input class="Button1" type="submit" name="Chicken"  value="Chicken"/>
-                    <input class="Button1" type="submit" name="Crepes"  value="Crepes"/>
-                    <input class="Button1" type="submit" name="Ice Cream"  value="Ice Cream"/>
-                    <input class="Button1" type="submit" name="Japanese"  value="Japanese"/>
-                    </form>
-              </tr>
-        </table>
-        <table>
-              <tr>
-                  <form>
-                    <input class="Button1" type="submit" name="Mexican"  value="Mexican"/>
-                    <input class="Button1" type="submit" name="Pizza"  value="Pizza"/>
-                    <input class="Button1" type="submit" name="Poutine"  value="Poutine"/>
-                    <input class="Button1" type="submit" name="Sandwich"  value="Sandwich"/>
-                    <input class="Button1" type="submit" name="Schnitzel"  value="Schnitzel"/>
-                    <input class="Button1" type="submit" name="Shawarma"  value="Shawarma"/>
-                 </form>
-              </tr>
-          </table>
+                      <td style = "width: 25%;"><input type="submit" name="Search" class ="Button200"></td>
+                      </tr>
+                     </table>
+<?php
+
+$provided_category = htmlspecialchars($_POST['category']);
+// Connect to database
+    $host = "209.236.71.62";
+    $user = "mrgogor3_RRUSR";
+    $pass = "fries278\mango";
+    $db = "mrgogor3_RR";
+    $port = 3306;
+    
+    $query = "SELECT name, address, timeToWalk FROM restaurant WHERE category = ('" . $provided_category . "');";
+    
+    $result = mysqli_query($connection, $query);
+     
+     
+     echo "<table style='margin-top: 5px; 
+            text-align: center;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width:auto;
+            color: #000000;'>";
+    while($row = mysqli_fetch_assoc($result)) {
+       
+        echo "<tr style='padding:7em;'>";
+        echo "<th style= 'width: 50%;
+                '><a style='color:blue;text-decoration:none;' href= 'profile.php?id=",$num,"'>",  $row["name"],"</a></th>";
+                
+        echo "<td style= 'width: 25%;
+                text-align: center;
+                '>", $row["address"], "</td>";
+        echo "<td style= 'width: 25%;
+                '>", $row["timeToWalk"], "</td>";
+        echo "</tr>";
+        $num +=1;
+    }
+    echo "</table>";
+
+?>
         </center>
      </div>
+     <br><br><br>
+     <br><br><br>
+     <br><br><br>
+     <br><br><br>
  <img src="Images/Footer.png" style="margin-bottom:-20px;margin-top:-400px;margin-left:-8px;width:101.23%;vertical-align:bottom;z-index:-1;position:relative;">
 </body>
 

@@ -85,8 +85,13 @@
 <table height="70px">
     <tr>
         <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
-        <td><button class="Button1" style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></td>
+        
+        
         <td><input type="text" value="" class="search" id="RestaurantSearch" style="height:2em;width:40em;"></td>
+        <td><input type="submit" style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></td>
+        
+        
+        
         <td><a href="Logout.php"><button class="Button1" style="font-size:15pt;background-color:#7FBCEF:">Sign-Out</button></a></td>
         <td style="font-size:20pt">| <?php echo $_SESSION['fname']; ?></td>
     </tr>
