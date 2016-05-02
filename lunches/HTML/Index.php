@@ -69,9 +69,7 @@
             
             </script>
             
-<script src="jquery-1.11.2.min.js">
-
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         
 <script type="text/javascript">
 //When the "Document" has loaded....
@@ -83,9 +81,8 @@ $("body").delay(1000).animate({opacity: 1}, 1250);
 $("#overlay").delay(2000).fadeOut(2000);
 
 });
-
-
 </script>
+
     <link rel = "stylesheet" href= "index.css">
     
     </head>
