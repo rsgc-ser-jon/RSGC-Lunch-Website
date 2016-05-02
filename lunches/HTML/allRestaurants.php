@@ -41,10 +41,10 @@
     
     // Run the query
     if (isset($_GET['id'])) {
-        $query = "SELECT name, address, timeToWalk FROM restaurant;";    
+        $query = "SELECT name, address, timeToWalk, id FROM restaurant;";    
         $cid = $_GET['id'];
     } else {
-        $query = "SELECT name, address, timeToWalk FROM restaurant;";
+        $query = "SELECT name, address, timeToWalk, id FROM restaurant;";
         $cid = 1;
     }
     
@@ -68,7 +68,7 @@
        
        
         echo "<tr style='border:1px;'>";
-        echo "<td style='width:50%;border:7px;'><b><a style='color:black;text-decoration:none;background-color;' href='profile.php?id=" . $num . "'>" .  $row["name"] . "</a></b></td>";
+        echo "<td style='width:50%;border:7px;'><b><a style='color:blue;text-decoration:none;background-color;' href='profile.php?id=" . $num . "'>" .  $row["name"] . "</a></b></td>";
         echo "<td style= 'width: 25%;
                 '>". $row["address"]. "</td>";
         echo "<td style= 'width: 25%;

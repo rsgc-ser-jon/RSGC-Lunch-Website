@@ -67,18 +67,11 @@ $row = mysqli_fetch_assoc($result);
 	        
             function thanks(){
                 alert("Thank you for submitting a rating, it has been added to the database.");
-                $("submitButton").innerHTML = "<p></p>"
-                $("5").innerHTML = "<p></p>"
+                $("submitButton").innerHTML = "<p></p>";
+                $("5").innerHTML = "<p></p>";
             }
             
-            function radio(x){
-                var x = this.x;
-                parseFloat(this.x);
-                
-                if(x-1 != 0){
-                    $(x).innerHTML = x+"<input type='radio' name='"+x+ "' id='"+x+ "' checked />"
-                }
-            }
+
             </script>
             
     <link rel = "stylesheet" href= "index.css">

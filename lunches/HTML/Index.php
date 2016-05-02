@@ -171,7 +171,7 @@
             <th rowspan="2"><a href="Index.php?id=<?php echo $rid+3; ?>"><button  class= "Button1">Next</button></a></th>
         </tr>
         <tr>
-            <td style = "text-align: center;"><b><?php echo $row['name']?></b></td>
+            <td style = "text-align: center;"><b><a style="color:blue;text-decoration:none;background-color;" href="profile.php?id=<?php echo $rid  ?>"><?php echo $row['name']?></a></b></td>
             <td style = "text-align: center;"><?php echo $row['address']?></td>
             <td style = "text-align: center;"><?php echo $row['timeToWalk']?></td>
         </tr>
