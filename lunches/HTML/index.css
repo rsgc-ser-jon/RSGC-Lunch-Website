@@ -49,7 +49,6 @@ body {
         font-family:arial;
         width:100%;}
 
-.
 h {width:200px;
 }
 .sButton {border-radius:25px;
@@ -124,4 +123,20 @@ fieldset {
         text-shadow: 5px 5px 5px #1D67A3;
         text-align: center;
         margin-top: 3em;
+}
+
+.button2
+{
+	color:white;
+	background-color:#FE7500;
+	border-radius:5px;
+	border:none;
+	width:4em;	
+	Height:1.6em;
+	font-size:4px;
+}
+
+.search {
+        font-family: "Times New Roman", Times, serif;
+        font-size:5px;
 }

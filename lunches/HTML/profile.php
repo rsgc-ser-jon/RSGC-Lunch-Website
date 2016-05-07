@@ -82,11 +82,40 @@ $row = mysqli_fetch_assoc($result);
 <center>
 <table height="70px">
     <tr>
-        <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
-        <td><button class="Button1" style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></td>
-        <td><input type="text" value="" class="search" id="RestaurantSearch" style="height:2em;width:40em;"></td>
-        <td><button class="Button1" style="font-size:15pt;background-color:#7FBCEF:">Sign-Out</button></td>
-        <td style="font-size:24pt">| <?php echo $_SESSION['fname']; ?></td>
+         <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <td><input type="text" name="search" class="search" style="width:300px; font-family: 'Times New Roman', Times, serif;
+        font-size:25px;"></td>
+        <td><button type="submit" style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></td>
+        </form>
+<?php
+        
+        $provided_entry = htmlspecialchars($_POST['search']);
+        // Connect to database
+        $host = "209.236.71.62";
+        $user = "mrgogor3_RRUSR";
+        $pass = "fries278\mango";
+        $db = "mrgogor3_RR";
+        $port = 3306;
+        
+        // Establish the connection
+        // (note username and password here is the *database* username and password, not for a user of this website)
+        $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
+        
+        
+        $query = "SELECT id FROM restaurant WHERE name = ('" . $provided_entry . "');"; 
+      
+        $result = mysqli_query($connection, $query);
+        $row = mysqli_fetch_assoc($result);
+        
+        if($row['id'] != ""){
+        header("Location: https://lunches-official-rsgc-kelly-c.c9users.io/lunches/HTML/profile.php?id='".$row['id']. "'");
+        exit;}
+        ?>
+        
+        
+        <td><a href="Logout.php"><button class="Button1" style="font-size:15pt;background-color:#7FBCEF:">Sign-Out</button></a></td>
+        <td style="font-size:20pt">| <?php echo $_SESSION['fname']; ?></td>
     </tr>
 </table>
 </center>
