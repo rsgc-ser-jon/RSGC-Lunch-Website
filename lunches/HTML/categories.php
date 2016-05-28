@@ -75,7 +75,7 @@ $host = "209.236.71.62";
 <table height="70px">
     <tr>
          <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <form action="SearchBar.php" method="post">
         <td><input type="text" name="search" class="search" style="width:300px; font-family: 'Times New Roman', Times, serif;
         font-size:25px;"></td>
         <td><a href ="SearchBar.php"><button style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></a></td>

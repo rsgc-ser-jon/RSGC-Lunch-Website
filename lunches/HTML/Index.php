@@ -109,15 +109,16 @@ $("#overlay").delay(2000).fadeOut(2000);
     
 <!--</div style="background-color:#FAEBC3;">-->
  
-<h1>
+      
+  <h1>
 <center>
 <table height="70px">
     <tr>
          <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <form action="SearchBar.php" method="post">
         <td><input type="text" name="search" class="search" style="width:300px; font-family: 'Times New Roman', Times, serif;
         font-size:25px;"></td>
-        <td><a href ="SearchBar.php"></a><button style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></a></td>
+        <td><a href ="SearchBar.php"><button style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></a></td>
         </form>
         <td><a href="Logout.php"><button class="Button1" style="font-size:15pt;background-color:#7FBCEF:">Sign-Out</button></a></td>
         <td style="font-size:20pt">| <?php echo $_SESSION['fname']; ?></td>
