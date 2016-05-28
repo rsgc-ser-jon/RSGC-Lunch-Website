@@ -71,52 +71,21 @@ $host = "209.236.71.62";
 <body>
       
   <h1>
-  <center>
-  <table height="70px">
-      
+<center>
+<table height="70px">
     <tr>
-          <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
+         <td class=""><a href="Index.php" style="color:white;text-decoration:none;">RSGC Lunch Routes</a></td>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <td><input type="text" name="search" class="search" style="width:300px; font-family: 'Times New Roman', Times, serif;
         font-size:25px;"></td>
-        <td><button type="submit" style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></td>
+        <td><a href ="SearchBar.php"><button style="width:5em;font-size:15pt;background-color:#065da5;">Search</button></a></td>
         </form>
-<?php
-        
-        $provided_entry = htmlspecialchars($_POST['search']);
-        // Connect to database
-        $host = "209.236.71.62";
-        $user = "mrgogor3_RRUSR";
-        $pass = "fries278\mango";
-        $db = "mrgogor3_RR";
-        $port = 3306;
-        
-        // Establish the connection
-        // (note username and password here is the *database* username and password, not for a user of this website)
-        $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
-        
-        
-        $query = "SELECT id FROM restaurant WHERE name = ('" . $provided_entry . "');"; 
-      
-        $result = mysqli_query($connection, $query);
-        $row = mysqli_fetch_assoc($result);
-        
-        if($row['id'] != ""){
-        header("Location: https://lunches-official-rsgc-kelly-c.c9users.io/lunches/HTML/profile.php?id='".$row['id']. "'");
-        exit;}
-        ?>
-        
-        
         <td><a href="Logout.php"><button class="Button1" style="font-size:15pt;background-color:#7FBCEF:">Sign-Out</button></a></td>
         <td style="font-size:20pt">| <?php echo $_SESSION['fname']; ?></td>
     </tr>
-  </table>
-  
-  
-  </center>
-  
-  
-  </h1>  
+</table>
+</center>
+</h1>    
      <div class="pageCenter" style="margin-top:2em;">
          <br><br><br>
          <center>
@@ -145,7 +114,7 @@ $host = "209.236.71.62";
                           <option name = "Shawarma">Shawarma</option><br>
                       </select></td>
                       
-                      <td style = "width: 25%; float: center;"><input type="submit" name="Search" class ="button2"></td>
+                      <td style = "width: 25%; float: center;"><input type="submit" name="Search" class ="button1"></td>
                       </tr>
                      </table>
                      <br><br><br>
@@ -159,7 +128,7 @@ $provided_category = htmlspecialchars($_POST['category']);
     $db = "mrgogor3_RR";
     $port = 3306;
     
-    $query = "SELECT name, address, timeToWalk FROM restaurant WHERE category = ('" . $provided_category . "');";
+    $query = "SELECT id, name, address, timeToWalk FROM restaurant WHERE category = ('" . $provided_category . "');";
     
     $result = mysqli_query($connection, $query);
      
@@ -174,7 +143,7 @@ $provided_category = htmlspecialchars($_POST['category']);
        
         echo "<tr style='padding:7em;'>";
         echo "<th style= 'width: 50%;
-                '><a style='color:blue;text-decoration:none;' href= 'profile.php?id=",$num,"'>",  $row["name"],"</a></th>";
+                '><a style='color:blue;text-decoration:none;' href= 'profile.php?id=",$row["id"],"'>",  $row["name"],"</a></th>";
                 
         echo "<td style= 'width: 25%;
                 text-align: center;
@@ -182,7 +151,6 @@ $provided_category = htmlspecialchars($_POST['category']);
         echo "<td style= 'width: 25%;
                 '>", $row["timeToWalk"], "</td>";
         echo "</tr>";
-        $num +=1;
     }
     echo "</table>";
 
